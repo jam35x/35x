@@ -1,3 +1,3 @@
 # xpoolcardano
-X POOL CARDANO
+X POOL CARDANO (xpoolcardano.xyz)
 Cardano Staking Pool
