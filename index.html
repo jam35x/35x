@@ -19,6 +19,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+  <script src="js/main.js"></script>
 
 </head>
 
@@ -64,6 +66,25 @@
   </div>
   <!-- Header -->
   <div class="container-fluid">
+    <div class="row my-5">
+      <div class="col-2"></div>
+      <div class="col-8">
+        <h4 class="text-center">Live Pool Stats</h4>
+        <div class="d-flex justify-content-center font-weight-bolder">
+          <div class="p-4 bg-info flex-fill">Epoch: <span id="ptepoch"></span></div>
+          <div class="p-4 bg-primary flex-fill">Slot: <span id="ptslot"></span></div>
+          <div class="p-4 bg-info flex-fill">Height: <span id="ptheight"></span></div>
+          <div class="p-4 bg-primary flex-fill">Live Stake: <span id="ptstake"></span></div>
+          <div class="p-4 bg-info flex-fill">Epoch Blocks: <span id="pteblocks"></span></div>
+        </div>
+        <div>
+          <p class="text-center text-md-right">Courtesy of <a href="https://pooltool.io"  target="_blank"><img class="ptwidget" src="https://pooltool.io/pooltoollogosm.png"> PoolTool.io</a><br/><span class="ptwidget">Data updates every 60 seconds.</span></p>
+        </div>
+     </div>
+     <div class="col-2"></div>
+    </div>
+   </div>
+   <div class="container-fluid">
     <div class="row my-5">
       <div class="col-2"></div>
       <div class="col-8">
