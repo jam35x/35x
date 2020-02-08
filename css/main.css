@@ -13,22 +13,26 @@
 
 
 
-body { 
-      background-color: rgb(18, 19, 38);
+body {
+   background-color: rgb(18, 19, 38);
+}
+
+.display-xl {
+   font-size: x-large;
 }
 
 span.ptwidget {
-        font-size:xx-small;
+   font-size: xx-small;
 }
 
 img.ptwidget {
-        vertical-align:middle;
-        height: 20px;
-        width: 20px;
+   vertical-align: middle;
+   height: 20px;
+   width: 20px;
 }
 
 a.ptwidget {
-        color: #ffffff;
+   color: #ffffff;
 }
 
 
