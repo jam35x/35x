@@ -3,8 +3,8 @@ body {
 }
 
 .display-xl {
+   color: coral;
    font-size: xx-large;
-   color: #FF2400;
 }
 
 span.ptwidget {
