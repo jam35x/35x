@@ -9,10 +9,10 @@ var mypoolid = "3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea
         })
 
         $.getJSON( "https://pooltool.s3-us-west-2.amazonaws.com/stats/stats.json?now="+String(start), function( data ) {
-            var formattedheight = numeral(data['majoritymax']).format('0,');
+            // var formattedheight = numeral(data['majoritymax']).format('0,');
             $("#ptepoch").html(data['currentepoch'])
             $("#ptslot").html(data['currentslot'])
-            $("#ptheight").html(formattedheight)
+            $("#ptheight").html(data['majoritymax'])
         })
     }
 
