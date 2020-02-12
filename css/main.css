@@ -7,6 +7,12 @@ body {
    font-size: xx-large;
 }
 
+.dont-break-out {
+   overflow-wrap: break-word;
+   word-wrap: break-word;
+   word-break: break-word;
+}
+
 span.ptwidget {
    font-size: xx-small;
 }
