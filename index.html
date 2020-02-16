@@ -25,24 +25,51 @@
 </head>
 
 <body class="text-white">
-  <!-- Sticky-top -->
-  <nav class="sticky-top navbar-dark bg-dark">
+  <!-- sticky-top -->
+  <nav class="sticky-top bg-dark">
   <!-- Social buttons -->
     <div class="text-center">
         <ul class="list-unstyled list-inline">
           <li class="list-inline-item">
-            <h4 class="">Connect with us:</h4>
+            <a class="btn-floating btn-lg color-red" href="#section1">
+              <i class="fas fa-arrow-alt-circle-up"></i>
+            </a>
           </li>
           <li class="list-inline-item">
-            <a class="btn-floating btn-lg" href="https://twitter.com/xpoolcardano" target="_blank">
+            <a class="btn-floating btn-lg color-red" href="#section2">
+              Live Stats
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-lg color-red" href="#section3">
+              Reward Data
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-lg color-red" href="#section4">
+              Node Spec
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-lg color-red" href="#section5">
+              How to Delegate?
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-lg color-red" href="https://twitter.com/xpoolcardano" target="_blank">
               <i class="fab fa-twitter"></i>
               Twitter
             </a>
           </li>
           <li class="list-inline-item">
-            <a class="btn-floating btn-lg" href="https://t.me/xpoolcardano" target="_blank">
+            <a class="btn-floating btn-lg color-red" href="https://t.me/xpoolcardano" target="_blank">
               <i class="fab fa-telegram"></i>
               Telegram
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-lg color-red" href="#section6">
+              <i class="fas fa-arrow-alt-circle-down"></i>
             </a>
           </li>
         </ul>
@@ -51,25 +78,29 @@
   <!-- Sticky-top -->
   <!-- Header -->
   <div class="container-fluid">
+    <span class="anchor" id="section1"></span>
     <div class="row">
       <div class="col">
         <img class="mx-auto d-block img-fluid my-5" src="X-pool-cardano.png" alt="logo">
       </div>
     </div>
+  </div>  
+  <div class="container-fluid">
     <div class="row">
-      <div class="col text-center">
-        <h1>X POOL CARDANO Is Now Live On Shelley Incentivized Testnet</h1>
-        <h5 class="dont-break-out">Stake Pool ID: <a href="https://shelleyexplorer.cardano.org/en/stake-pool/3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea/" target="_blank">3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea<a>, Ticker: XPOOL</h5>
-        <p>To download Testnet wallet and to know more about Shelley Incentivized Testnet visit <a href="https://staking.cardano.org/" target="_blank">staking.cardano.org</a>.</p>
+      <div class="col">
+        <h1 class="text-center">X POOL CARDANO Is Now Live On Shelley Incentivized Testnet</h1>
+        <h5 class="text-center dont-break-out">Stake Pool ID: <a href="https://shelleyexplorer.cardano.org/en/stake-pool/3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea/" target="_blank">3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea<a>, Ticker: XPOOL</h5>
+        <p class="text-center my-3">To download Testnet wallet and to know more about Shelley Incentivized Testnet visit <a href="https://staking.cardano.org/" target="_blank">staking.cardano.org</a>.</p>
       </div>
     </div>
   </div>
   <!-- Header -->
-  <div class="container-fluid">
+  <div class="container-fluid" id="livestat">
     <div class="row my-5">
       <div class="col-2"></div>
       <div class="col-8">
-        <h4 class="text-center">Live Pool Stats</h4>
+        <span class="anchor" id="section2"></span>
+        <h4 class="text-center font-weight-bolder" id="">Live Pool Stats</h4>
         <div class="d-sm-flex justify-content-center text-center font-weight-bolder">
           <div class="p-2 bg-dark flex-fill">Epoch: <span id="ptepoch" class="display-xl"></span></div>
           <div class="p-2 bg-dark flex-fill">Slot: <span id="ptslot" class="display-xl"></span></div>
@@ -80,18 +111,43 @@
         <div>
           <p class="text-center text-md-right">Courtesy of <a href="https://pooltool.io"  target="_blank"><img class="ptwidget" src="https://pooltool.io/pooltoollogosm.png"> PoolTool.io</a><br/><span class="ptwidget">Data updates every 60 seconds.</span></p>
         </div>
-     </div>
-     <div class="col-2"></div>
+      </div>
+      <div class="col-2"></div>
     </div>
-   </div>
-   <div class="container-fluid">
+  </div>
+  <div class="container-fluid" id="livestat">
     <div class="row my-5">
       <div class="col-2"></div>
       <div class="col-8">
+        <span class="anchor" id="section3"></span>
+        <h4 class="text-center font-weight-bolder">Staking Reward Data</h4>
+        <div class="d-sm-flex flex-sm-wrap justify-content-center text-center font-weight-bolder">
+          <div class="p-2 bg-dark flex-fill">Epoch: <select id="sel1" name="epoch"></select></div>
+          <div class="p-2 bg-dark flex-fill">Fee: <span id="srfee" class="display-xl">6.25%</span></div>
+          <div class="p-2 bg-dark flex-fill">Lifetime Fee: <span id="srltfee" class="display-xl"></span></div>
+          <div class="p-2 bg-dark flex-fill">Av. ROS:<span id="sraros" class="display-xl"></span></div>
+          <div class="p-2 bg-dark flex-fill">Blocks: <span id="srblocks" class="display-xl"></span></div>
+          <div class="p-2 bg-dark flex-fill">Stake: <span id="srstake" class="display-xl"></span></div>
+          <div class="p-2 bg-dark flex-fill">Epoch ROS: <span id="sreros" class="display-xl"></span></div>
+          <div class="p-2 bg-dark flex-fill">Reward: <span id="srreward" class="display-xl"></span></div>
+          <div class="p-2 bg-dark flex-fill">Epoch Fee: <span id="srefee" class="display-xl"></span></div>
+        </div>
+        <div>
+          <p class="text-center text-md-right">Data by <a href="https://pooltool.io"  target="_blank"><img class="ptwidget" src="https://pooltool.io/pooltoollogosm.png"> PoolTool.io</a></p>
+        </div>
+      </div>
+      <div class="col-2"></div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row my-5">
+      <div class="col-2"></div>
+      <div class="col-8">
+        <span class="anchor" id="section4"></span>
         <table class="table table-dark table-hover text-center">
             <thead>
               <tr>
-                <th colspan="2" class="lead">Node Specification: <h6>Running multiple nodes in multiple locations, one node will run as pool (leader) node depending on the stability of the node.</h6></th>
+                <th colspan="2" class="lead font-weight-bold">Node Specification: <h6>Running multiple nodes in multiple locations, one node will run as pool (leader) node depending on the stability of the node.</h6></th>
               </tr>
             </thead>
             <tbody>
@@ -123,14 +179,15 @@
       <div class="row my-5">
         <div class="col-2"></div>
         <div class="col-8 text-center">
+          <span class="anchor" id="section5"></span>
           <h5>HOW TO DELEGATE?</h5>
-          <p class="dont-break-out">Download the testnet wallet from <a href="https://staking.cardano.org/" target="_blank">staking.cardano.org</a> and use pool id: 3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea and ticker symbol: XPOOL from delegation center of testnet wallet to delegate your ADA and earn reward.</p>
+          <p>Download the testnet wallet from <a href="https://staking.cardano.org/" target="_blank">staking.cardano.org</a> and use pool id: <span class="dont-break-out">3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea</span> and ticker symbol: XPOOL from delegation center of testnet wallet to delegate your ADA and earn reward.</p>
 
           <p>To know more about Shelley Incentivized Testnet and to download testnet wallet visit <a href="https://staking.cardano.org/" target="_blank">staking.cardano.org</a> and <a href="https://testnet.iohkdev.io/en/cardano/shelley/" target="_blank">tesnet.iohkdev.io</a></p>
-          <h4>Daedalus</h4>
-          <img class="img-fluid" src="daedalus.png" alt="Daedalus Wallet">
-          <h4 class="mt-4">Yoroi</h4>
-          <img class="img-fluid" src="yoroi.png" alt="Yoroi Wallet">
+          <h4 class="text-center">Daedalus</h4>
+          <img class="img-fluid" src="img/daedalus.png" alt="Daedalus Wallet">
+          <h4 class="text-center mt-4">Yoroi</h4>
+          <img class="img-fluid" src="img/yoroi.png" alt="Yoroi Wallet"> 
         </div>
         <div class="col-2"></div>
       </div>
@@ -138,6 +195,7 @@
   </div>
 
   <!-- Footer -->
+  <span class="anchor" id="section6"></span>
   <footer class="page-footer font-small mdb-color pt-4">
     <!-- Footer Links -->
     <div class="container text-center text-md-left">
