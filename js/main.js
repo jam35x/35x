@@ -26,10 +26,10 @@ let StakeData = function() {
             $("#sel1").append(txt);
         });
 
-        var $drevese = $('#sel1'),
-            $reversed = $drevese.children().toArray().reverse();
+        var drevese = $('#sel1'),
+            reversed = drevese.children().toArray().reverse();
 
-        $drevese.append($reversed); 
+        drevese.append(reversed); 
         $("select#sel1").prop('selectedIndex', 0);
 
         let dataLoad = function(epoch) {
