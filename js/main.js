@@ -62,7 +62,7 @@ let StakeData = function() {
             $("#srltfee").html(ltimeFee);
 
 
-        }
+        };
 
         var selectEpoch = $('#sel1').val();
         dataLoad(selectEpoch);
@@ -74,7 +74,7 @@ let StakeData = function() {
 
     });
 
-}
+};
 
 
 $(document).ready(function() {
