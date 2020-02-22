@@ -36,12 +36,13 @@ let StakeData = function() {
             //console.log(data);
             var x = 0, y = 0, z = 0, xx = 0;
             for(var key in data) {
-                if (key == "updatedAt") {
+                if (key == "updatedAt" || key == "2") {
                     continue;
                 };
                 x = x + Number(data[key]["blockstake"]);
                 y = y + Number(data[key]["value_for_stakers"]);
                 z = z + Number(data[key]["value_taxed"]);
+                xx = xx + Number(((data[key]["value_for_stakers"]-data[key]["value_taxed"])*10000)/data[key]["blockstake"]);
                 //console.log(z);
             };
 
@@ -50,8 +51,8 @@ let StakeData = function() {
             var epochFee = numeral(data[epoch]["value_taxed"]/1000000).format('0.00a');
             var epochRos = numeral(((data[epoch]["value_for_stakers"]-data[epoch]["value_taxed"])*365)/data[epoch]["blockstake"]).format('0.00%');
             var avgRos = numeral(((y-z)*365)/x).format('0.00%');
-            //var per1000s = numeral(((data[epoch]["value_for_stakers"]-data[epoch]["value_taxed"])*10000)/data[epoch]["blockstake"]).format('0.00a');
-            //var lavg1000s = numeral(xx).format('0.00a');
+            var per1000s = numeral(((data[epoch]["value_for_stakers"]-data[epoch]["value_taxed"])*10000)/data[epoch]["blockstake"]).format('0.00a');
+            var lavg1000s = numeral(xx).format('0.00a');
             var ltimeFee = numeral(z/1000000).format('0.00a');
             //console.log(avgRos);
 
