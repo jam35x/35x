@@ -50,6 +50,8 @@ let StakeData = function() {
             var epochFee = numeral(data[epoch]["value_taxed"]/1000000).format('0.00a');
             var epochRos = numeral(((data[epoch]["value_for_stakers"]-data[epoch]["value_taxed"])*365)/data[epoch]["blockstake"]).format('0.00%');
             var avgRos = numeral(((y-z)*365)/x).format('0.00%');
+            var per1000s = numeral(((data[epoch]["value_for_stakers"]-data[epoch]["value_taxed"])*10000)/data[epoch]["blockstake"]).format('0.00a');
+            var avg1000s = numeral(((y-z)*10000)/x).format('0.00a');
             var ltimeFee = numeral(z/1000000).format('0.00a');
             //console.log(avgRos);
 
@@ -59,6 +61,8 @@ let StakeData = function() {
             $("#srefee").html(epochFee);
             $("#sreros").html(epochRos);
             $("#sraros").html(avgRos);
+            $("#sr10000").html(per1000s);
+            $("#srav10000").html(avg1000s);
             $("#srltfee").html(ltimeFee);
 
 
