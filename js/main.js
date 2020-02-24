@@ -54,6 +54,8 @@ let StakeData = function() {
             var per1000s = numeral(((data[epoch]["value_for_stakers"]-data[epoch]["value_taxed"])*10000)/data[epoch]["blockstake"]).format('0.00a');
             var lavg1000s = numeral(xx).format('0.00a');
             var ltimeFee = numeral(z/1000000).format('0.00a');
+            var ltimeReward = numeral(y/1000000).format('0.00a');
+            var ltimeStake = numeral(x/1000000).format('0.00a');
             //console.log(avgRos);
 
             $("#srstake").html(blockStake);
@@ -65,6 +67,8 @@ let StakeData = function() {
             $("#sr10000").html(per1000s);
             $("#srav10000").html(lavg1000s);
             $("#srltfee").html(ltimeFee);
+            $("#srltreward").html(ltimeReward);
+            $("#srltstake").html(ltimeStake);
 
 
         };
