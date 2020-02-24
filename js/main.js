@@ -90,4 +90,9 @@ $(document).ready(function() {
     LoadData();
     setInterval(LoadData, 60000); // this will update every 60 seconds
     StakeData();
+    $(document).on('click','.navbar-collapse',function(e) {
+        if( $(e.target).is('a:not(".dropdown-toggle")') ) {
+            $(this).collapse('hide');
+        }
+    });
 });
