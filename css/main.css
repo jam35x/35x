@@ -17,6 +17,7 @@ a.ptwidget {
 .display-xl {
 	font-size: xx-large;
 	color: coral;
+	font-weight: bolder;
 }
 
 #sel1 {
@@ -34,7 +35,7 @@ a.ptwidget {
 }
 
 .color-red {
-	color: rgb(23, 191, 99);
+	color: coral;		
 	font-weight: bolder;
 }
 
@@ -43,4 +44,8 @@ a.ptwidget {
   height: 100px; /*same height as header*/
   margin-top: -100px; /*same height as header*/
   visibility: hidden;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+	color: rgb(23, 191, 99);
 }
