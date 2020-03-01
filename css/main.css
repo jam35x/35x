@@ -20,6 +20,12 @@ a.ptwidget {
 	font-weight: bolder;
 }
 
+.display-xl:hover {
+	font-size: xxx-large;
+	color: #ff4040;
+	font-weight: bolder;
+}
+
 #sel1 {
     /* border: 0; */
     background-color: #343a40;
