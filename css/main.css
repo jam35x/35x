@@ -1,18 +1,18 @@
-body { 
-  		background-color: rgb(18, 19, 38);
+body {
+	background-color: rgb(18, 19, 38);
 }
 
 span.ptwidget {
         font-size:xx-small;
-    }
+}
 img.ptwidget {
         vertical-align:middle;
         height: 20px;
         width: 20px;
-    }
+}
 a.ptwidget {
         color: #ffffff;
-    }
+}
 
 .display-xl {
 	font-size: xx-large;
@@ -27,17 +27,17 @@ a.ptwidget {
 }
 
 #sel1 {
-    /* border: 0; */
-    background-color: #343a40;
-    font-size: xx-large;
-    color: coral;
-    font-weight: bolder;
+	/* border: 0; */
+        background-color: #343a40;
+    	font-size: xx-large;
+    	color: coral;
+    	font-weight: bolder;
 }
 
 .dont-break-out {
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  word-break: break-word;
+  	overflow-wrap: break-word;
+  	word-wrap: break-word;
+  	word-break: break-word;
 }
 
 .color-red {
@@ -46,10 +46,10 @@ a.ptwidget {
 }
 
 .anchor{
-  display: block;
-  height: 100px; /*same height as header*/
-  margin-top: -100px; /*same height as header*/
-  visibility: hidden;
+  	display: block;
+  	height: 100px; /*same height as header*/
+  	margin-top: -100px; /*same height as header*/
+  	visibility: hidden;
 }
 
 .navbar-dark .navbar-nav .nav-link{
