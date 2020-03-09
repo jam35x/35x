@@ -28,6 +28,19 @@ a.ptwidget {
 	font-weight: bolder;
 }
 
+@media only screen and (max-width: 576px) {
+  .display-xl {
+	display: block;
+	white-space: nowrap;
+}
+
+.display-xl:hover {
+	display: block;
+	white-space: nowrap;
+
+}
+}
+
 #sel1 {
 	/* border: 0; */
         background-color: #343a40;
