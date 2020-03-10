@@ -1,10 +1,3 @@
-@media only screen and (max-width: 576px) {
-  .display-xl {
-	display: block;
-	white-space: nowrap;
-}
-}
-
 body {
 	background-color: rgb(18, 19, 38);
 }
@@ -27,12 +20,12 @@ a.ptwidget {
 	font-size: xx-large;
 	color: coral;
 	font-weight: bolder;
+	display: block;
+	white-space: nowrap;
 }
 
 .display-xl:hover {
-	font-size: xxx-large;
 	color: #ff4040;
-	font-weight: bolder;
 }
 
 #sel1 {
@@ -41,6 +34,14 @@ a.ptwidget {
     	font-size: xx-large;
     	color: coral;
     	font-weight: bolder;
+	display: block;
+	white-space: nowrap;
+	margin: 2px auto;
+}
+
+#sel1:hover {
+       background-color: #343a40;
+       color: #ff4040;
 }
 
 .dont-break-out {
