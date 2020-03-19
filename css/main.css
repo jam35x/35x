@@ -18,7 +18,7 @@ a.ptwidget {
 
 .display-xl {
 	font-size: xx-large;
-	color: coral;
+	color: #F08080;
 	font-weight: bolder;
 	display: block;
 	white-space: nowrap;
@@ -32,7 +32,7 @@ a.ptwidget {
 	/* border: 0; */
         background-color: #343a40;
     	font-size: xx-large;
-    	color: coral;
+    	color: #F08080;
     	font-weight: bolder;
 	display: block;
 	white-space: nowrap;
@@ -51,7 +51,7 @@ a.ptwidget {
 }
 
 .color-red {
-	color: #F08080;		
+	color: coral;		
 	font-weight: bolder;
 }
 
