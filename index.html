@@ -107,8 +107,9 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col">
-        <h1 class="text-center">X POOL CARDANO Is Now Live On Shelley Incentivized Testnet</h1>
-        <h5 class="text-center dont-break-out">Stake Pool ID: <a href="https://shelleyexplorer.cardano.org/en/stake-pool/3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea/" target="_blank">3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea<a>, Ticker: XPOOL</h5>
+        <h1 class="text-center">CARDANO Staking Pool</h1>
+        <h5>Ticker: XPOOL</h5>
+        <h5 class="text-center dont-break-out">Stake Pool ID: <a href="https://shelleyexplorer.cardano.org/en/stake-pool/3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea/" target="_blank">3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea</a></h5>
         <p class="text-center my-3">To download Testnet wallet and to know more about Shelley Incentivized Testnet visit <a href="https://staking.cardano.org/" target="_blank">staking.cardano.org</a>.</p>
       </div>
     </div>
@@ -120,13 +121,13 @@
       <div class="col-8">
         <span class="anchor" id="section2"></span>
         <h4 class="text-center font-weight-bolder" id="">Live Pool Stats</h4>
-        <div class="d-sm-flex flex-sm-wrap text-center justify-content-center font-weight-bolder">
-          <div class="p-2 bg-dark flex-fill">Epoch: <span id="ptepoch" class="display-xl"></span></div>
-          <div class="p-2 bg-dark flex-fill">Slot: <span id="ptslot" class="display-xl"></span></div>
-          <div class="p-2 bg-dark flex-fill">Height: <span id="ptheight" class="display-xl"></span></div>
-          <div class="p-2 bg-dark flex-fill">Live Stake: <span id="ptstake" class="display-xl"></span></div>
-          <div class="p-2 bg-dark flex-fill">Epoch Blocks: <span id="pteblocks" class="display-xl"></span></div>
-          <div class="p-2 bg-dark flex-fill">Lifetime Blocks: <span id="ptlblocks" class="display-xl"></span></div>
+        <div class="d-sm-flex flex-sm-wrap text-center justify-content-center font-weight-bolder border">
+          <div class="p-2 flex-fill">Epoch: <span id="ptepoch" class="display-xl"></span></div>
+          <div class="p-2 flex-fill">Slot: <span id="ptslot" class="display-xl"></span></div>
+          <div class="p-2 flex-fill">Height: <span id="ptheight" class="display-xl"></span></div>
+          <div class="p-2 flex-fill">Live Stake: <span id="ptstake" class="display-xl"></span></div>
+          <div class="p-2 flex-fill">Epoch Blocks: <span id="pteblocks" class="display-xl"></span></div>
+          <div class="p-2 flex-fill">Lifetime Blocks: <span id="ptlblocks" class="display-xl"></span></div>
         </div>
         <div>
           <p class="text-center text-md-right">Courtesy of <a href="https://pooltool.io"  target="_blank"><img class="ptwidget" src="https://pooltool.io/pooltoollogosm.png"> PoolTool.io</a><br/><span class="ptwidget">Data updates every 60 seconds.</span></p>
@@ -140,21 +141,20 @@
       <div class="col-2"></div>
       <div class="col-8">
         <span class="anchor" id="section3"></span>
-        <h4 class="text-center font-weight-bolder">Staking Reward Data</h4>
-        <div class="d-sm-flex flex-sm-wrap text-center justify-content-center font-weight-bolder">
-          <div class="p-2 bg-dark flex-fill">Epoch: <select id="sel1" name="epoch"></select></div>
-          <div class="p-2 bg-dark flex-fill">Blocks: <span id="srblocks" class="display-xl"></span></div>
-          <div class="p-2 bg-dark flex-fill">Stake: <span id="srstake" class="display-xl"></span></div>
-          <div class="p-2 bg-dark flex-fill" data-toggle="tooltip" title="Distributed to Delegators">Reward: <span id="srreward" class="display-xl"></span></div>
-          <div class="p-2 bg-dark flex-fill">Fee: <span id="srfee" class="display-xl">6.25%</span></div>
-          <div class="p-2 bg-dark flex-fill">Epoch Fee: <span id="srefee" class="display-xl"></span></div>
-          <div class="p-2 bg-dark flex-fill" data-toggle="tooltip" title="( Reward × 365 ) ÷ Stake">Epoch ROS: <span id="sreros" class="display-xl"></span></div>
-          <div class="p-2 bg-dark flex-fill" data-toggle="tooltip" title="Average Epoch ROS">Av. ROS: <span id="sraros" class="display-xl"></span></div>
-          <div class="p-2 bg-dark flex-fill" data-toggle="tooltip" title="TADA Return Per 10,000 Staked">Per 10,000: <span id="sr10000" class="display-xl"></span></div>
-          <div class="p-2 bg-dark flex-fill" data-toggle="tooltip" title="Lifetime TADA Return Per 10,000 Staked">Lifetime Per 10,000: <span id="srav10000" class="display-xl"></span></div>
-          <div class="p-2 bg-dark flex-fill">Lifetime Fee: <span id="srltfee" class="display-xl"></span></div>
-          <div class="p-2 bg-dark flex-fill">Lifetime Reward: <span id="srltreward" class="display-xl"></span></div>
-          <div class="p-2 bg-dark flex-fill">Lifetime Stake: <span id="srltstake" class="display-xl"></span></div>
+        <div class="d-sm-flex flex-sm-wrap text-center justify-content-center font-weight-bolder border">
+          <div class="p-2 flex-fill">Epoch: <select id="sel1" name="epoch"></select></div>
+          <div class="p-2 flex-fill">Blocks: <span id="srblocks" class="display-xl"></span></div>
+          <div class="p-2 flex-fill">Stake: <span id="srstake" class="display-xl"></span></div>
+          <div class="p-2 flex-fill" data-toggle="tooltip" title="Distributed to Delegators">Reward: <span id="srreward" class="display-xl"></span></div>
+          <div class="p-2 flex-fill">Fee: <span id="srfee" class="display-xl">6.25%</span></div>
+          <div class="p-2 flex-fill">Epoch Fee: <span id="srefee" class="display-xl"></span></div>
+          <div class="p-2 flex-fill" data-toggle="tooltip" title="( Reward × 365 ) ÷ Stake">Epoch ROS: <span id="sreros" class="display-xl"></span></div>
+          <div class="p-2 flex-fill" data-toggle="tooltip" title="Average Epoch ROS">Av. ROS: <span id="sraros" class="display-xl"></span></div>
+          <div class="p-2 flex-fill" data-toggle="tooltip" title="TADA Return Per 10,000 Staked">Per 10,000: <span id="sr10000" class="display-xl"></span></div>
+          <div class="p-2 flex-fill" data-toggle="tooltip" title="Lifetime TADA Return Per 10,000 Staked">Lifetime Per 10,000: <span id="srav10000" class="display-xl"></span></div>
+          <div class="p-2 flex-fill">Lifetime Fee: <span id="srltfee" class="display-xl"></span></div>
+          <div class="p-2 flex-fill">Lifetime Reward: <span id="srltreward" class="display-xl"></span></div>
+          <div class="p-2 flex-fill">Lifetime Stake: <span id="srltstake" class="display-xl"></span></div>
         </div>
         <div>
           <p class="text-center text-md-right">Data by <a href="https://pooltool.io"  target="_blank"><img class="ptwidget" src="https://pooltool.io/pooltoollogosm.png"> PoolTool.io</a></p>
@@ -168,27 +168,28 @@
       <div class="col-2"></div>
       <div class="col-8">
         <span class="anchor" id="section4"></span>
-        <table class="table table-dark table-hover text-center">
+        <h4 class="text-center font-weight-bolder">Node Specification</h4>
+        <table class="table table-bordered table-sm table-dark table-hover text-center">
             <thead>
               <tr>
-                <th colspan="2" class="lead font-weight-bold">Node Specification: <h6>Running multiple nodes in multiple locations, one node will run as pool (leader) node depending on the stability of the node.</h6></th>
+                <th colspan="2" class="lead font-weight-bold"><h6>Running multiple nodes in multiple locations, one node will run as pool (leader) node depending on the stability of the node.</h6></th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>CPU Cores:</td>
-                <td>2</td>
+                <td>4</td>
               </tr>
               <tr>
                 <td>RAM:</td>
-                <td>4 GB</td>
+                <td>8 GB</td>
               </tr>
               <tr>
                 <td>OS:</td>
                 <td>CentOS 8, Ubuntu 18.04</td>
               </tr>
               <tr>
-                <td>HDD:</td>
+                <td>Storage:</td>
                 <td>SSD</td>
               </tr>
               <tr>
