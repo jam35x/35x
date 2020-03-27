@@ -18,7 +18,7 @@ a.ptwidget {
 
 .display-xl {
 	font-size: xx-large;
-	color: #F08080;
+	color: coral;
 	font-weight: bolder;
 	display: block;
 	white-space: nowrap;
@@ -30,9 +30,9 @@ a.ptwidget {
 
 #sel1 {
 	/* border: 0; */
-        background-color: #343a40;
+	background-color: rgb(18, 19, 38);
     	font-size: xx-large;
-    	color: #F08080;
+    	color: coral;
     	font-weight: bolder;
 	display: block;
 	white-space: nowrap;
@@ -40,7 +40,7 @@ a.ptwidget {
 }
 
 #sel1:hover {
-       background-color: #343a40;
+       background-color: rgb(18, 19, 38);
        color: #ff4040;
 }
 
@@ -51,7 +51,7 @@ a.ptwidget {
 }
 
 .color-red {
-	color: coral;		
+	color: #F08080;		
 	font-weight: bolder;
 }
 
