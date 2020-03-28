@@ -1,5 +1,5 @@
-body, .navbar-dark {
-	background-color: rgb(18, 19, 38);
+body, .navbar-dark, .table-dark { 
+  		background-color: rgb(0, 0, 0);
 }
 
 span.ptwidget {
@@ -30,7 +30,7 @@ a.ptwidget {
 
 #sel1 {
 	/* border: 0; */
-	background-color: rgb(18, 19, 38);
+	background-color: rgb(0, 0, 0);
     	font-size: xx-large;
     	color: coral;
     	font-weight: bolder;
@@ -40,7 +40,7 @@ a.ptwidget {
 }
 
 #sel1:hover {
-       background-color: rgb(18, 19, 38);
+       background-color: rgb(0, 0, 0);
        color: #ff4040;
 }
 
