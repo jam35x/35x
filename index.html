@@ -26,7 +26,7 @@
 
 <body class="text-white">
   <!-- sticky-top -->
-  <nav class="navbar navbar-expand-lg sticky-top navbar-dark border-bottom">
+  <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
     <a class="navbar-brand" href>
       <img src="nav-logo.svg" width="150" height="40" alt="logo">
     </a>
@@ -119,13 +119,13 @@
       <div class="col-8">
         <span class="anchor" id="section2"></span>
         <h4 class="text-center font-weight-bolder" id="">Live Pool Stats</h4>
-        <div class="d-sm-flex flex-sm-wrap text-center justify-content-center font-weight-bolder border">
-          <div class="p-2 flex-fill">Epoch: <span id="ptepoch" class="display-xl"></span></div>
-          <div class="p-2 flex-fill">Slot: <span id="ptslot" class="display-xl"></span></div>
-          <div class="p-2 flex-fill">Height: <span id="ptheight" class="display-xl"></span></div>
-          <div class="p-2 flex-fill">Live Stake: <span id="ptstake" class="display-xl"></span></div>
-          <div class="p-2 flex-fill">Epoch Blocks: <span id="pteblocks" class="display-xl"></span></div>
-          <div class="p-2 flex-fill">Lifetime Blocks: <span id="ptlblocks" class="display-xl"></span></div>
+        <div class="d-sm-flex flex-sm-wrap text-center justify-content-center font-weight-bolder">
+          <div class="p-2 flex-fill bg-dark">Epoch: <span id="ptepoch" class="display-xl"></span></div>
+          <div class="p-2 flex-fill bg-dark">Slot: <span id="ptslot" class="display-xl"></span></div>
+          <div class="p-2 flex-fill bg-dark">Height: <span id="ptheight" class="display-xl"></span></div>
+          <div class="p-2 flex-fill bg-dark">Live Stake: <span id="ptstake" class="display-xl"></span></div>
+          <div class="p-2 flex-fill bg-dark">Epoch Blocks: <span id="pteblocks" class="display-xl"></span></div>
+          <div class="p-2 flex-fill bg-dark">Lifetime Blocks: <span id="ptlblocks" class="display-xl"></span></div>
         </div>
         <div>
           <p class="text-center text-md-right">Courtesy of <a href="https://pooltool.io"  target="_blank"><img class="ptwidget" src="https://pooltool.io/pooltoollogosm.png"> PoolTool.io</a><br/><span class="ptwidget">Data updates every 60 seconds.</span></p>
@@ -140,20 +140,20 @@
       <div class="col-8">
         <span class="anchor" id="section3"></span>
         <h4 class="text-center font-weight-bolder" id="">Staking Reward Data</h4>
-        <div class="d-sm-flex flex-sm-wrap text-center justify-content-center font-weight-bolder border">
-          <div class="p-2 flex-fill">Epoch: <select id="sel1" name="epoch"></select></div>
-          <div class="p-2 flex-fill">Blocks: <span id="srblocks" class="display-xl"></span></div>
-          <div class="p-2 flex-fill">Stake: <span id="srstake" class="display-xl"></span></div>
-          <div class="p-2 flex-fill" data-toggle="tooltip" title="Distributed to Delegators">Reward: <span id="srreward" class="display-xl"></span></div>
-          <div class="p-2 flex-fill">Fee: <span id="srfee" class="display-xl">6.25%</span></div>
-          <div class="p-2 flex-fill">Epoch Fee: <span id="srefee" class="display-xl"></span></div>
-          <div class="p-2 flex-fill" data-toggle="tooltip" title="( Reward × 365 ) ÷ Stake">Epoch ROS: <span id="sreros" class="display-xl"></span></div>
-          <div class="p-2 flex-fill" data-toggle="tooltip" title="Average Epoch ROS">Av. ROS: <span id="sraros" class="display-xl"></span></div>
-          <div class="p-2 flex-fill" data-toggle="tooltip" title="TADA Return Per 10,000 Staked">Per 10,000: <span id="sr10000" class="display-xl"></span></div>
-          <div class="p-2 flex-fill" data-toggle="tooltip" title="Lifetime TADA Return Per 10,000 Staked">Lifetime Per 10,000: <span id="srav10000" class="display-xl"></span></div>
-          <div class="p-2 flex-fill">Lifetime Fee: <span id="srltfee" class="display-xl"></span></div>
-          <div class="p-2 flex-fill">Lifetime Reward: <span id="srltreward" class="display-xl"></span></div>
-          <div class="p-2 flex-fill">Lifetime Stake: <span id="srltstake" class="display-xl"></span></div>
+        <div class="d-sm-flex flex-sm-wrap text-center justify-content-center font-weight-bolder">
+          <div class="p-2 flex-fill bg-dark">Epoch: <select id="sel1" name="epoch"></select></div>
+          <div class="p-2 flex-fill bg-dark">Blocks: <span id="srblocks" class="display-xl"></span></div>
+          <div class="p-2 flex-fill bg-dark">Stake: <span id="srstake" class="display-xl"></span></div>
+          <div class="p-2 flex-fill bg-dark" data-toggle="tooltip" title="Distributed to Delegators">Reward: <span id="srreward" class="display-xl"></span></div>
+          <div class="p-2 flex-fill bg-dark">Fee: <span id="srfee" class="display-xl">6.25%</span></div>
+          <div class="p-2 flex-fill bg-dark">Epoch Fee: <span id="srefee" class="display-xl"></span></div>
+          <div class="p-2 flex-fill bg-dark" data-toggle="tooltip" title="( Reward × 365 ) ÷ Stake">Epoch ROS: <span id="sreros" class="display-xl"></span></div>
+          <div class="p-2 flex-fill bg-dark" data-toggle="tooltip" title="Average Epoch ROS">Av. ROS: <span id="sraros" class="display-xl"></span></div>
+          <div class="p-2 flex-fill bg-dark" data-toggle="tooltip" title="TADA Return Per 10,000 Staked">Per 10,000: <span id="sr10000" class="display-xl"></span></div>
+          <div class="p-2 flex-fill bg-dark" data-toggle="tooltip" title="Lifetime TADA Return Per 10,000 Staked">Lifetime Per 10,000: <span id="srav10000" class="display-xl"></span></div>
+          <div class="p-2 flex-fill bg-dark">Lifetime Fee: <span id="srltfee" class="display-xl"></span></div>
+          <div class="p-2 flex-fill bg-dark">Lifetime Reward: <span id="srltreward" class="display-xl"></span></div>
+          <div class="p-2 flex-fill bg-dark">Lifetime Stake: <span id="srltstake" class="display-xl"></span></div>
         </div>
         <div>
           <p class="text-center text-md-right">Data by <a href="https://pooltool.io"  target="_blank"><img class="ptwidget" src="https://pooltool.io/pooltoollogosm.png"> PoolTool.io</a></p>
