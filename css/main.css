@@ -1,9 +1,9 @@
 body { 
-  	background-color: rgb(18, 19, 28);
+  	background-color: rgb(10, 10, 20);
 }
 
 .bg-dark, .table-dark {
-	background-color: rgb(10, 10, 20)!important;
+	background-color: rgb(18, 19, 28)!important;
 }
 
 span.ptwidget {
@@ -34,7 +34,7 @@ a.ptwidget {
 
 #sel1 {
 	/* border: 0; */
-	background-color: rgb(10, 10, 20)!important;
+	background-color: rgb(18, 19, 28)!important;
     	font-size: xx-large;
     	color: coral;
     	font-weight: bolder;
