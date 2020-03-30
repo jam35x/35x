@@ -1,5 +1,14 @@
 body { 
   	background-color: rgb(10, 10, 20);
+	font-family: 'Rajdhani', sans-serif;
+}
+
+p {
+    	font-size: 1.25rem;
+}
+
+.good-times {
+	font-family: 'Good Times', arial;
 }
 
 .bg-dark, .table-dark {
