@@ -101,19 +101,12 @@ let StakeData = function() {
 let scroll_point = function () {
     $(window).scroll(function() {
         var windscroll = $(window).scrollTop();
-        if (windscroll >= 0) {
-            $('.anchor').each(function(i) {
-                if ($(this).position().top <= windscroll + 100) {
-                    $('.scroll_active').removeClass('active');
-                    $('.scroll_active').eq(i).addClass('active');
-                }
-            });
-
-        } else {
-
-            $('.navbar-nav .nav-item a.active').removeClass('active');
-            $('.navbar-nav .nav-item a.first').addClass('active');
-        }
+        $('.anchor').each(function(i) {
+            if ($(this).position().top <= windscroll + 100) {
+                $('.scroll_active').removeClass('active');
+                $('.scroll_active').eq(i).addClass('active');
+            }
+        });
 
     }).scroll();
 };
