@@ -29,7 +29,7 @@
   <!-- sticky-top -->
   <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark py-0 my-0">
     <a class="navbar-brand" href>
-      <img src="nav-logo.svg" width="150" height="40" alt="logo">
+      <img src="X-pool-cardano.png" width="150" height="40" alt="logo">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -38,7 +38,7 @@
     <div class="text-center collapse navbar-collapse font-weight-bolder" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item mx-3">
-            <a class="nav-link btn-lg active" href="#section1">
+            <a class="nav-link btn-lg scroll_active active" href="#top">
               <i class="fas fa-arrow-alt-circle-up"></i>
             </a>
           </li>
@@ -48,27 +48,27 @@
             </a>
           </li>
           <li class="nav-item mx-3">
-            <a class="nav-link btn-lg" href="#section2">
+            <a class="nav-link btn-lg scroll_active" href="#live_stats">
               Live Stats
             </a>
           </li>
           <li class="nav-item mx-3">
-            <a class="nav-link btn-lg" href="#section3">
+            <a class="nav-link btn-lg scroll_active" href="#reward_data">
               Reward Data
             </a>
           </li>
           <li class="nav-item mx-3">
-            <a class="nav-link btn-lg" href="#section4">
+            <a class="nav-link btn-lg scroll_active" href="#node_spec">
               Node Spec
             </a>
           </li>
           <li class="nav-item mx-3">
-            <a class="nav-link btn-lg" href="#section5">
+            <a class="nav-link btn-lg scroll_active" href="#how_delegate">
               How to Delegate?
             </a>
           </li>
           <li class="nav-item mx-3">
-            <a class="nav-link btn-lg" href="#section6">
+            <a class="nav-link btn-lg scroll_active" href="#bottom">
               <i class="fas fa-arrow-alt-circle-down"></i>
             </a>
           </li>
@@ -99,12 +99,12 @@
       </div>
     </div>
   </div>
-  <!-- Header -->  
+  <!-- Header -->
+  <span class="anchor" id="top"></span>
   <div class="container-fluid mt-4">
     <div class="row">
       <div class="col-2"></div>
       <div class="col-8">
-        <span class="anchor" id="section1"></span>
         <h3 class="border-bottom mb-4 good-times">Cardano Staking Pool</h3>
         <h5>Ticker: XPOOL</h5>
         <h5 class="dont-break-out">Stake Pool ID: <a href="https://shelleyexplorer.cardano.org/en/stake-pool/3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea/" target="_blank">3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea</a></h5>
@@ -114,11 +114,11 @@
     </div>
   </div>
   <!-- Header -->
+  <span class="anchor" id="live_stats"></span>
   <div class="container-fluid" id="livestat">
     <div class="row my-5">
       <div class="col-2"></div>
       <div class="col-8">
-        <span class="anchor" id="section2"></span>
         <h4 class="text-center font-weight-bolder" id="">Live Pool Stats</h4>
         <div class="d-sm-flex flex-sm-wrap text-center justify-content-center font-weight-bolder">
           <div class="p-2 flex-fill bg-dark"><span id="ptepoch" class="display-xl"></span>Epoch</div>
@@ -135,11 +135,11 @@
       <div class="col-2"></div>
     </div>
   </div>
+  <span class="anchor" id="reward_data"></span>
   <div class="container-fluid" id="livestat">
     <div class="row my-5">
       <div class="col-2"></div>
       <div class="col-8">
-        <span class="anchor" id="section3"></span>
         <h4 class="text-center font-weight-bolder" id="">Staking Reward Data</h4>
         <div class="d-sm-flex flex-sm-wrap text-center justify-content-center font-weight-bolder">
           <div class="p-2 flex-fill bg-dark"><select id="sel1" name="epoch"></select>Epoch</div>
@@ -163,11 +163,11 @@
       <div class="col-2"></div>
     </div>
   </div>
+  <span class="anchor" id="node_spec"></span>
   <div class="container-fluid">
     <div class="row my-5">
       <div class="col-2"></div>
       <div class="col-8">
-        <span class="anchor" id="section4"></span>
         <h4 class="text-center font-weight-bolder">Node Specification</h4>
         <table class="table table-bordered table-sm table-dark table-hover text-center">
             <thead>
@@ -200,11 +200,11 @@
         </table></div>
       <div class="col-2"></div>
     </div>
+    <span class="anchor" id="how_delegate"></span>
     <div class="container-fluid">
       <div class="row my-5">
         <div class="col-2"></div>
         <div class="col-8">
-          <span class="anchor" id="section5"></span>
           <h4>How To Delegate?</h4>
           <p>Download the testnet wallet from <a href="https://staking.cardano.org/" target="_blank">staking.cardano.org</a> and use pool id: <span class="dont-break-out">3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea</span> and ticker symbol: XPOOL from delegation center of testnet wallet to delegate your ADA and earn reward.</p>
 
@@ -220,7 +220,7 @@
   </div>
 
   <!-- Footer -->
-  <span class="anchor" id="section6"></span>
+  <span class="anchor" id="bottom"></span>
   <footer class="page-footer font-small mdb-color pt-4">
     <!-- Footer Links -->
     <div class="container text-center text-md-left">
@@ -278,10 +278,10 @@
       </div>
       <!-- Footer links -->
 
-      <hr>
+      <hr class="my-5">
 
       <!-- Grid row -->
-      <div class="row d-flex align-items-center">
+      <div class="row d-flex align-items-center my-4">
 
         <!-- Grid column -->
         <div class="col-md-7 col-lg-8">
