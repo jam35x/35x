@@ -100,13 +100,18 @@ let StakeData = function() {
 
 let scroll_point = function () {
     $(window).scroll(function() {
-        var windscroll = $(window).scrollTop();
-        $('.anchor').each(function(i) {
-            if ($(this).position().top <= windscroll + 100) {
-                $('.scroll_active').removeClass('active');
-                $('.scroll_active').eq(i).addClass('active');
-            }
-        });
+        var wind_scroll = $(window).scrollTop();
+        if( $(window).height() + wind_scroll >= $(document).height() ) {
+            $('.scroll_active').removeClass('active');
+            $('[href="#bottom"]').addClass('active');
+        } else {
+            $('.anchor').each(function(i) {
+                if ($(this).position().top <= wind_scroll + 150) {
+                    $('.scroll_active').removeClass('active');
+                    $('.scroll_active').eq(i).addClass('active');
+                }
+            });
+        }
 
     }).scroll();
 };
