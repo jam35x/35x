@@ -7,8 +7,12 @@ p {
     	font-size: 1.25rem;
 }
 
-.good-times {
-	font-family: 'Good Times', 'Rajdhani';
+.progress {
+	height: 2px;
+}
+
+.progress-bar {
+	background-color: #ff4040;
 }
 
 .bg-dark, .table-dark {
