@@ -27,7 +27,22 @@ let LoadData = function() {
             $("#pteblocks").html(data["epochblocks"]);
             $("#ptlblocks").html(data["lifetimeblocks"]);
     });
-}
+    
+    let progress_bar = function () {
+        var width = 0;
+        function frame() {
+            if (width < 100) {
+                width++;
+                width_i = "width: " + width + "%";
+                $(".progress-stats").attr("style", width_i); 
+            } else {
+                return false;
+            };
+        };
+        setInterval(frame, 600);
+    };
+    progress_bar();
+};
 
 let StakeData = function() {
     $.getJSON( "https://pooltool.s3-us-west-2.amazonaws.com/8e4d2a3/pools/"+mypoolid+"/epochstats.json", function( data ) {
