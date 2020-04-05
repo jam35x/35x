@@ -30,11 +30,13 @@ let LoadData = function() {
     
     let progress_bar = function () {
         var width = 0;
+        var progress_s = $(".progress-stats");
         function frame() {
             if (width < 100) {
                 width++;
                 width_i = "width: " + width + "%";
-                $(".progress-stats").attr("style", width_i); 
+                progress_s.removeAttr("style");
+                progress_s.attr("style", width_i); 
             } else {
                 return false;
             };
