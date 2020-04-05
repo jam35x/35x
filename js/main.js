@@ -29,8 +29,10 @@ let LoadData = function() {
     });
     
     let progress_bar = function () {
+        clearInterval(progess);
         var width = 0;
         var progress_s = $(".progress-stats");
+        progress_s.removeAttr("style");
         function frame() {
             if (width < 100) {
                 width++;
@@ -38,10 +40,10 @@ let LoadData = function() {
                 progress_s.removeAttr("style");
                 progress_s.attr("style", width_i); 
             } else {
-                return false;
+                clearInterval(progess);
             };
         };
-        setInterval(frame, 600);
+        var progess = setInterval(frame, 600);
     };
     progress_bar();
 };
