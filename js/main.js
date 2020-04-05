@@ -32,14 +32,14 @@ let LoadData = function() {
         var width = 0;
         function frame() {
             if (width < 100) {
-                width++;
+                width+=2;
                 width_i = "width: " + width + "%";
                 $(".progress-stats").attr("style", width_i); 
             } else {
                 clearInterval(progess);
             };
         };
-        var progess = setInterval(frame, 600);
+        var progess = setInterval(frame, 1200);
     };
     progress_bar();
 };
