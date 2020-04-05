@@ -29,15 +29,12 @@ let LoadData = function() {
     });
     
     let progress_bar = function () {
-        clearInterval(progess);
         var width = 0;
-        var progress_s = $(".progress-stats");
-        progress_s.attr("style", width + "%");
         function frame() {
             if (width < 100) {
                 width++;
                 width_i = "width: " + width + "%";
-                progress_s.attr("style", width_i); 
+                $(".progress-stats").attr("style", width_i); 
             } else {
                 clearInterval(progess);
             };
