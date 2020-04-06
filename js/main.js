@@ -131,6 +131,74 @@ let scroll_point = function () {
     }).scroll();
 };
 
+let progress_bar_epoch = function () {
+    const d = new Date();
+    var hour_count = {
+            "0" : 20,
+            "1" : 24,
+            "2" : 28,
+            "3" : 32,
+            "4" : 36,
+            "5" : 42,
+            "6" : 46,
+            "7" : 50,
+            "8" : 54,
+            "9" : 58,
+            "10" : 62,
+            "11" : 66,
+            "12" : 70,
+            "13" : 74,
+            "14" : 78,
+            "15" : 82,
+            "16" : 86,
+            "17" : 90,
+            "18" : 94,
+            "19" : 98,
+            "20" : 3,
+            "21" : 8,
+            "22" : 12,
+            "23" : 16
+    };
+    var hour = d.getUTCHours();
+    var minute = d.getUTCMinutes();
+
+    if (hour == 19 && minute == 13) {
+        $(".progress-epoch").removeAttr("style");
+        $(".progress-epoch").attr("style", "width: 100%");
+
+    } else if (hour == 19 && minute < 13) {
+        $(".progress-epoch").removeAttr("style");
+        $(".progress-epoch").attr("style", "width: 98%");
+    } else if (hour == 19 && minute > 13) {
+        $(".progress-epoch").removeAttr("style");
+        $(".progress-epoch").attr("style", "width: 1%");
+    } else if (minute > 30) {
+        var hour_plus = hour_count[hour] + 2;
+        $(".progress-epoch").removeAttr("style");
+        $(".progress-epoch").attr("style", "width: " + hour_plus + "%");
+    } else {
+        $(".progress-epoch").removeAttr("style");
+        $(".progress-epoch").attr("style", "width: " + hour_count[hour] + "%");
+    };
+
+}; 
+
+let epoch_counter = function() {
+    var now = new Date().getTime();
+    var d = new Date();
+    d.setUTCSeconds(37);
+    d.setUTCMinutes(13);
+    d.setUTCHours(19);
+    var countDownDate = d.getTime();
+    var distance = countDownDate - now;
+
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    $("#counter").html(hours + "h " + minutes + "m " + seconds + "s ");
+};
+
 $(document).ready(function() {
     LoadData();
     setInterval(LoadData, 60000); // this will update every 60 seconds
@@ -145,4 +213,8 @@ $(document).ready(function() {
         $(this).addClass('active');
     });
     scroll_point();
+    progress_bar_epoch();
+    setInterval(progress_bar_epoch, 60000);
+    epoch_counter();
+    setInterval(epoch_counter, 1000);
 });
