@@ -60,6 +60,16 @@ a.ptwidget {
        color: #ff4040;
 }
 
+.display-xl-c {
+	font-size: xx-large;
+	color: coral;
+	font-weight: bolder;
+}
+
+.display-xl-c:hover {
+	color: #ff4040;
+}
+
 .dont-break-out {
   	overflow-wrap: break-word;
   	word-wrap: break-word;
