@@ -186,9 +186,27 @@ let progress_bar_epoch = function () {
 let epoch_counter = function() {
     var now = new Date().getTime();
     var d = new Date();
-    d.setUTCSeconds(37);
-    d.setUTCMinutes(13);
-    d.setUTCHours(19);
+    var n = d.getUTCDate();
+    if (d.getUTCHours() == 19 && d.getUTCMinutes() == 13 && d.getUTCSeconds() >= 37) {
+        d.setUTCSeconds(37);
+        d.setUTCMinutes(13);
+        d.setUTCHours(19);
+        d.setUTCDate(n+1);
+    } else if (d.getUTCHours() == 19 && d.getUTCMinutes() > 13) {
+        d.setUTCSeconds(37);
+        d.setUTCMinutes(13);
+        d.setUTCHours(19);
+        d.setUTCDate(n+1);
+    } else if (d.getUTCHours() > 19) {
+        d.setUTCSeconds(37);
+        d.setUTCMinutes(13);
+        d.setUTCHours(19);
+        d.setUTCDate(n+1);
+    } else {
+        d.setUTCSeconds(37);
+        d.setUTCMinutes(13);
+        d.setUTCHours(19);
+    };
     var countDownDate = d.getTime();
     var distance = countDownDate - now;
 
