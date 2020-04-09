@@ -10,7 +10,7 @@ body {
 	font-family: 'Rajdhani', sans-serif;
 }
 
-p {
+p, .links-p {
     	font-size: 1.25rem;
 }
 
