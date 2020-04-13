@@ -187,17 +187,20 @@ let epoch_counter = function() {
     var now = new Date().getTime();
     var d = new Date();
     var n = d.getUTCDate();
-    if (d.getUTCHours() == 19 && d.getUTCMinutes() == 13 && d.getUTCSeconds() >= 37) {
+    var hour = d.getUTCHours();
+    var minute = d.getUTCMinutes();
+    var second = d.getUTCSeconds();
+    if (hour == 19 && minute == 13 && second >= 37) {
         d.setUTCSeconds(37);
         d.setUTCMinutes(13);
         d.setUTCHours(19);
         d.setUTCDate(n+1);
-    } else if (d.getUTCHours() == 19 && d.getUTCMinutes() > 13) {
+    } else if (hour == 19 && minute > 13) {
         d.setUTCSeconds(37);
         d.setUTCMinutes(13);
         d.setUTCHours(19);
         d.setUTCDate(n+1);
-    } else if (d.getUTCHours() > 19) {
+    } else if (hour > 19) {
         d.setUTCSeconds(37);
         d.setUTCMinutes(13);
         d.setUTCHours(19);
