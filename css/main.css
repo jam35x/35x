@@ -3,6 +3,10 @@
 		display: block;
 		white-space: nowrap;
 	}
+	
+	h2 {
+		font-size: 1.625rem;
+	}
 }
 
 body { 
