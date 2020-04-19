@@ -190,6 +190,7 @@ let epoch_counter = function() {
     var hour = d.getUTCHours();
     var minute = d.getUTCMinutes();
     var second = d.getUTCSeconds();
+    
     if (hour == 19 && minute == 13 && second >= 37) {
         d.setUTCSeconds(37);
         d.setUTCMinutes(13);
@@ -210,14 +211,21 @@ let epoch_counter = function() {
         d.setUTCMinutes(13);
         d.setUTCHours(19);
     };
+    
     var countDownDate = d.getTime();
     var distance = countDownDate - now;
 
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    $("#counter").html(hours + "h " + minutes + "m " + seconds + "s ");
+    
+    if (hours == 0 && minutes == 0) {
+        $("#counter").html(seconds + "s ");
+    } else if (hours == 0) {
+        $("#counter").html(minutes + "m " + seconds + "s ");
+    } else { 
+        $("#counter").html(hours + "h " + minutes + "m " + seconds + "s ");
+    };
 };
 
 $(document).ready(function() {
