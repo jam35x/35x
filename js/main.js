@@ -70,7 +70,7 @@ let StakeData = function() {
                 x = x + Number(data[key]["blockstake"]);
                 y = y + Number(data[key]["value_for_stakers"]);
                 z = z + Number(data[key]["value_taxed"]);
-                xx = xx + Number((data[key]["value_for_stakers"]*10000)/data[key]["blockstake"]);
+                xx = xx + (((Number(data[key]["value_for_stakers"]))*10000)/Number(data[key]["blockstake"]));
                 //console.log(z);
             };
 
