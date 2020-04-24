@@ -1,6 +1,6 @@
 @media screen and (max-width: 568px) {
     	.display-b {
-		display: block;
+		display: inline-block;
 		white-space: nowrap;
 	}
 }
