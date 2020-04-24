@@ -1,10 +1,3 @@
-@media screen and (max-width: 568px) {
-    	.display-b {
-		display: inline-block;
-		white-space: nowrap;
-	}
-}
-
 body { 
   	background-color: rgb(10, 10, 20);
 	font-family: 'Rajdhani', sans-serif;
@@ -71,6 +64,8 @@ a.ptwidget {
 	font-size: xx-large;
 	color: coral;
 	font-weight: bolder;
+	display: inline-block;
+	white-space: nowrap;
 }
 
 .display-xl-c:hover {
