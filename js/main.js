@@ -132,11 +132,11 @@ let scroll_point = function () {
 };
 
 let epoch_counter = function() {
-    const epoch_sec = 86400;
+    const epoch_m_sec = 86400 * 1000;
     const start = Date.UTC(2020, 3, 18, 19, 13, 37);
     var now = Date.now(); 
-    var remainder = ((now - start) % (epoch_sec*1000));
-    var distance = (epoch_sec*1000) - remainder;
+    var remainder = (now - start) % epoch_m_sec;
+    var distance = epoch_m_sec - remainder;
 
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -153,7 +153,7 @@ let epoch_counter = function() {
         $("#counter").html(days + "d " + hours + "h " + minutes + "m " + seconds + "s ");
     };
 
-    var progress = Math.ceil((remainder*100)/(epoch_sec*1000));
+    var progress = Math.ceil((remainder * 100) / epoch_m_sec);
 
     $(".progress-epoch").removeAttr("style");
     $(".progress-epoch").attr("style", "width: " + progress + "%");
