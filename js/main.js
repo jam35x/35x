@@ -131,101 +131,32 @@ let scroll_point = function () {
     }).scroll();
 };
 
-let progress_bar_epoch = function () {
-    const d = new Date();
-    var hour_count = {
-            "0" : 20,
-            "1" : 24,
-            "2" : 28,
-            "3" : 32,
-            "4" : 36,
-            "5" : 42,
-            "6" : 46,
-            "7" : 50,
-            "8" : 54,
-            "9" : 58,
-            "10" : 62,
-            "11" : 66,
-            "12" : 70,
-            "13" : 74,
-            "14" : 78,
-            "15" : 82,
-            "16" : 86,
-            "17" : 90,
-            "18" : 94,
-            "19" : 98,
-            "20" : 3,
-            "21" : 8,
-            "22" : 12,
-            "23" : 16
-    };
-    var hour = d.getUTCHours();
-    var minute = d.getUTCMinutes();
-
-    if (hour == 19 && minute == 13) {
-        $(".progress-epoch").removeAttr("style");
-        $(".progress-epoch").attr("style", "width: 100%");
-
-    } else if (hour == 19 && minute < 13) {
-        $(".progress-epoch").removeAttr("style");
-        $(".progress-epoch").attr("style", "width: 98%");
-    } else if (hour == 19 && minute > 13) {
-        $(".progress-epoch").removeAttr("style");
-        $(".progress-epoch").attr("style", "width: 1%");
-    } else if (minute > 30) {
-        var hour_plus = hour_count[hour] + 2;
-        $(".progress-epoch").removeAttr("style");
-        $(".progress-epoch").attr("style", "width: " + hour_plus + "%");
-    } else {
-        $(".progress-epoch").removeAttr("style");
-        $(".progress-epoch").attr("style", "width: " + hour_count[hour] + "%");
-    };
-
-}; 
-
 let epoch_counter = function() {
-    var now = new Date().getTime();
-    var d = new Date();
-    var n = d.getUTCDate();
-    var hour = d.getUTCHours();
-    var minute = d.getUTCMinutes();
-    var second = d.getUTCSeconds();
-    
-    if (hour == 19 && minute == 13 && second >= 37) {
-        d.setUTCSeconds(37);
-        d.setUTCMinutes(13);
-        d.setUTCHours(19);
-        d.setUTCDate(n+1);
-    } else if (hour == 19 && minute > 13) {
-        d.setUTCSeconds(37);
-        d.setUTCMinutes(13);
-        d.setUTCHours(19);
-        d.setUTCDate(n+1);
-    } else if (hour > 19) {
-        d.setUTCSeconds(37);
-        d.setUTCMinutes(13);
-        d.setUTCHours(19);
-        d.setUTCDate(n+1);
-    } else {
-        d.setUTCSeconds(37);
-        d.setUTCMinutes(13);
-        d.setUTCHours(19);
-    };
-    
-    var countDownDate = d.getTime();
-    var distance = countDownDate - now;
+    const epoch_sec = 86400;
+    const start = Date.UTC(2020, 3, 18, 19, 13, 37);
+    var now = Date.now(); 
+    var remainder = ((now - start) % (epoch_sec*1000));
+    var distance = (epoch_sec*1000) - remainder;
 
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-    if (hours == 0 && minutes == 0) {
+
+    if (days == 0 && hours == 0 && minutes == 0) {
         $("#counter").html(seconds + "s ");
-    } else if (hours == 0) {
+    } else if (days == 0 && hours == 0) {
         $("#counter").html(minutes + "m " + seconds + "s ");
-    } else { 
+    } else if (days == 0) { 
         $("#counter").html(hours + "h " + minutes + "m " + seconds + "s ");
+    } else { 
+        $("#counter").html(days + "d " + hours + "h " + minutes + "m " + seconds + "s ");
     };
+
+    var progress = Math.ceil((remainder*100)/(epoch_sec*1000));
+
+    $(".progress-epoch").removeAttr("style");
+    $(".progress-epoch").attr("style", "width: " + progress + "%");
 };
 
 $(document).ready(function() {
@@ -242,8 +173,6 @@ $(document).ready(function() {
         $(this).addClass('active');
     });
     scroll_point();
-    progress_bar_epoch();
-    setInterval(progress_bar_epoch, 60000);
     epoch_counter();
     setInterval(epoch_counter, 1000);
 });
