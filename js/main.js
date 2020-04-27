@@ -11,7 +11,7 @@ let LoadData = function() {
     });
 
     $.getJSON( "https://pooltool.s3-us-west-2.amazonaws.com/8e4d2a3/pools/"+mypoolid+"/livestats.json?now="+String(start), function( data ) {
-        var formattedstake = numeral(data["livestake"]/1000000).format('0.00a');
+        var formattedstake = numeral(data["livestake"] / 1000000).format('0.00a');
 
             $("#ptstake").html(formattedstake);
             if (
@@ -32,7 +32,7 @@ let LoadData = function() {
         var width = 0;
         function frame() {
             if (width < 100) {
-                width+=2;
+                width += 2;
                 width_i = "width: " + width + "%";
                 $(".progress-stats").attr("style", width_i); 
             } else {
@@ -70,20 +70,20 @@ let StakeData = function() {
                 x = x + Number(data[key]["blockstake"]);
                 y = y + Number(data[key]["value_for_stakers"]);
                 z = z + Number(data[key]["value_taxed"]);
-                xx = xx + (((Number(data[key]["value_for_stakers"]))*10000)/Number(data[key]["blockstake"]));
+                xx = xx + (((Number(data[key]["value_for_stakers"])) * 10000) / Number(data[key]["blockstake"]));
                 //console.log(z);
             };
 
-            var blockStake = numeral(data[epoch]["blockstake"]/1000000).format('0.00a'); 
-            var blockReward = numeral(data[epoch]["value_for_stakers"]/1000000).format('0.00a');
-            var epochFee = numeral(data[epoch]["value_taxed"]/1000000).format('0.00a');
-            var epochRos = numeral((data[epoch]["value_for_stakers"]*365)/data[epoch]["blockstake"]).format('0.00%');
-            var avgRos = numeral((y*365)/x).format('0.00%');
-            var per1000s = numeral((data[epoch]["value_for_stakers"]*10000)/data[epoch]["blockstake"]).format('0.00a');
+            var blockStake = numeral(data[epoch]["blockstake"] / 1000000).format('0.00a'); 
+            var blockReward = numeral(data[epoch]["value_for_stakers"] / 1000000).format('0.00a');
+            var epochFee = numeral(data[epoch]["value_taxed"] / 1000000).format('0.00a');
+            var epochRos = numeral((data[epoch]["value_for_stakers"] * 365) / data[epoch]["blockstake"]).format('0.00%');
+            var avgRos = numeral((y * 365) / x).format('0.00%');
+            var per1000s = numeral((data[epoch]["value_for_stakers"] * 10000) / data[epoch]["blockstake"]).format('0.00a');
             var lavg1000s = numeral(xx).format('0.00a');
-            var ltimeFee = numeral(z/1000000).format('0.00a');
-            var ltimeReward = numeral(y/1000000).format('0.00a');
-            var ltimeStake = numeral(x/1000000).format('0.00a');
+            var ltimeFee = numeral(z / 1000000).format('0.00a');
+            var ltimeReward = numeral(y / 1000000).format('0.00a');
+            var ltimeStake = numeral(x / 1000000).format('0.00a');
             //console.log(avgRos);
 
             $("#srstake").html(blockStake);
