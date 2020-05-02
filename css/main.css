@@ -94,6 +94,13 @@ a.ptwidget {
 	color: rgb(23, 191, 99);
 }
 
+.carousel-indicators li, .carousel-control-prev-icon, .carousel-control-next-icon {
+	background-color: #ff4040!important;
+}
+
+.carousel-caption {
+	color: #ff4040!important;
+}
 /*
 .pace {
   -webkit-pointer-events: none;
