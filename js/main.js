@@ -133,24 +133,49 @@ let scroll_point = function () {
 
 let epoch_counter = function() {
     const epoch_m_sec = 86400 * 1000;
-    const start = Date.UTC(2020, 3, 18, 19, 13, 37);
-    var now = Date.now(); 
+    const start = Date.UTC(2019, 11, 13, 19, 13, 37);
+    
+    var now = Date.now();
+    var current_epoch = parseInt((now - start) / epoch_m_sec); 
     var remainder = (now - start) % epoch_m_sec;
     var distance = epoch_m_sec - remainder;
+
+    $("#current-epoch").html(current_epoch); 
 
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+    function two_digit(num) {
+        if (num < 10) {
+            return "0" + num;
+        }
+        else {
+            return num;
+        };
+    };
+
     if (days == 0 && hours == 0 && minutes == 0) {
-        $("#counter").html(seconds + "s ");
+        $("#counter").removeAttr("style");
+        $("#counter").attr("style", "font-size:180%;");
+        $("#counter").html(two_digit(seconds) + "<span>sec</span>");
+        $("#counter span").attr("style", "font-size:60%;");
     } else if (days == 0 && hours == 0) {
-        $("#counter").html(minutes + "m " + seconds + "s ");
-    } else if (days == 0) { 
-        $("#counter").html(hours + "h " + minutes + "m " + seconds + "s ");
-    } else { 
-        $("#counter").html(days + "d " + hours + "h " + minutes + "m " + seconds + "s ");
+        $("#counter").removeAttr("style");
+        $("#counter").attr("style", "font-size:165%;");
+        $("#counter").html(two_digit(minutes) + "<span>min</span> " + two_digit(seconds) + "<span>sec</span>");
+        $("#counter span").attr("style", "font-size:55%;");
+    } else if (days == 0) {
+        $("#counter").removeAttr("style");
+        $("#counter").attr("style", "font-size:165%;"); 
+        $("#counter").html(two_digit(hours) + "<span>hr</span> " + two_digit(minutes) + "<span>min</span> " + two_digit(seconds) + "<span>sec</span>");
+        $("#counter span").attr("style", "font-size:55%;");
+    } else {
+        $("#counter").removeAttr("style");
+        $("#counter").attr("style", "font-size:150%;");
+        $("#counter").html(days + "<span>d</span> " + two_digit(hours) + "<span>hr</span> " + two_digit(minutes) + "<span>min</span> " + two_digit(seconds) + "<span>sec</span>");
+        $("#counter span").attr("style", "font-size:50%;");
     };
 
     var progress = Math.ceil((remainder * 100) / epoch_m_sec);
