@@ -163,9 +163,9 @@ let epoch_counter = function() {
         $("#counter span").attr("style", "font-size:60%;");
     } else if (days == 0 && hours == 0) {
         $("#counter").removeAttr("style");
-        $("#counter").attr("style", "font-size:165%;");
+        $("#counter").attr("style", "font-size:180%;");
         $("#counter").html(two_digit(minutes) + "<span>min</span> " + two_digit(seconds) + "<span>sec</span>");
-        $("#counter span").attr("style", "font-size:55%;");
+        $("#counter span").attr("style", "font-size:60%;");
     } else if (days == 0) {
         $("#counter").removeAttr("style");
         $("#counter").attr("style", "font-size:165%;"); 
@@ -173,9 +173,9 @@ let epoch_counter = function() {
         $("#counter span").attr("style", "font-size:55%;");
     } else {
         $("#counter").removeAttr("style");
-        $("#counter").attr("style", "font-size:150%;");
+        $("#counter").attr("style", "font-size:165%;");
         $("#counter").html(days + "<span>d</span> " + two_digit(hours) + "<span>hr</span> " + two_digit(minutes) + "<span>min</span> " + two_digit(seconds) + "<span>sec</span>");
-        $("#counter span").attr("style", "font-size:50%;");
+        $("#counter span").attr("style", "font-size:55%;");
     };
 
     var progress = Math.ceil((remainder * 100) / epoch_m_sec);
