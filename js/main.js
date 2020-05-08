@@ -159,7 +159,7 @@ let epoch_counter = function() {
     if (days == 0 && hours == 0 && minutes == 0) {
         $("#counter").removeAttr("style");
         $("#counter").attr("style", "font-size:165%;");
-        $("#counter").html(two_digit(seconds) + "<span>sec</span>");
+        $("#counter").html(seconds + "<span>s</span>");
         $("#counter span").attr("style", "font-size:55%;");
     } else if (days == 0 && hours == 0) {
         $("#counter").removeAttr("style");
