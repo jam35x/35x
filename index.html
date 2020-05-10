@@ -120,15 +120,35 @@
       <div class="col-1"></div>
     </div>
   </div>
-        
   <div class="container-fluid">
     <div class="row">
       <div class="col-2"></div>
       <div class="col-8">
-        <h4 class="mt-4">Epoch <span id="current-epoch"></span> Ends in: <span id="counter" class="display-xl-c"></span></h5>
-        <h5>Ticker: <span class="display-xl-c">35X</span></h5>        
-        <h5 class="dont-break-out">Stake Pool ID: <a href="https://shelleyexplorer.cardano.org/en/stake-pool/3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea/" target="_blank">3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea</a></h5>
-        <h5 class="my-3"><i class="fas fa-download"></i> To download Testnet wallet & to know more about Shelley ITN visit <a href="https://staking.cardano.org/" target="_blank">staking.cardano.org</a>.</h5>        
+        <h4 class="mt-4 font-weight-bold">
+          <i class="far fa-hourglass"></i>
+          <span style="margin-left: 12px">Epoch 
+            <span id="current-epoch"></span> Ends in: 
+            <span id="counter" class="display-xl-c"></span>
+          </span>
+        </h4>
+        <h5 class="font-weight-bold">
+          <i class="far fa-star"></i>
+          <span style="margin-left: 10px">Ticker: 
+            <span class="display-xl-c">35X</span>
+          </span>
+        </h5>        
+        <h5 class="dont-break-out font-weight-bold">
+          <i class="far fa-id-card"></i>
+          <span style="margin-left: 10px">Stake Pool ID: 
+            <a href="https://shelleyexplorer.cardano.org/en/stake-pool/3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea/" target="_blank">3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea</a>
+          </span>
+        </h5>
+        <h5 class="my-3">
+          <i class="fas fa-download"></i>
+          <span style="margin-left: 10px">To download Testnet wallet & to know more about Shelley ITN visit 
+            <a href="https://staking.cardano.org/" target="_blank">staking.cardano.org</a>.
+          </span>
+        </h5>        
       </div>
       <div class="col-2"></div>
     </div>
@@ -139,19 +159,37 @@
     <div class="row my-5">
       <div class="col-2"></div>
       <div class="col-8">
-        <h4 class="text-center font-weight-bolder" id="">Live Pool Stats</h4>
+        <h4 class="text-center font-weight-bolder">Live Pool Stats</h4>
         <div class="d-sm-flex flex-sm-wrap text-center justify-content-center font-weight-bolder">
-          <div class="p-2 flex-fill bg-dark"><span id="ptepoch" class="display-xl"></span>Epoch</div>
-          <div class="p-2 flex-fill bg-dark"><span id="ptslot" class="display-xl"></span>Slot</div>
-          <div class="p-2 flex-fill bg-dark"><span id="ptheight" class="display-xl"></span>Height</div>
-          <div class="p-2 flex-fill bg-dark"><span id="ptstake" class="display-xl"></span>Live Stake</div>
-          <div class="p-2 flex-fill bg-dark"><span id="pteblocks" class="display-xl"></span>Epoch Blocks</div>
-          <div class="p-2 flex-fill bg-dark"><span id="ptlblocks" class="display-xl"></span>Lifetime Blocks</div>
+          <div class="p-2 flex-fill bg-dark">
+            <span id="ptepoch" class="display-xl"></span>Epoch
+          </div>
+          <div class="p-2 flex-fill bg-dark">
+            <span id="ptslot" class="display-xl"></span>Slot
+          </div>
+          <div class="p-2 flex-fill bg-dark">
+            <span id="ptheight" class="display-xl"></span>Height
+          </div>
+          <div class="p-2 flex-fill bg-dark">
+            <span id="ptstake" class="display-xl"></span>Live Stake
+          </div>
+          <div class="p-2 flex-fill bg-dark">
+            <span id="pteblocks" class="display-xl"></span>Epoch Blocks
+          </div>
+          <div class="p-2 flex-fill bg-dark">
+            <span id="ptlblocks" class="display-xl"></span>Lifetime Blocks
+          </div>
         </div>
         <div class="progress my-0 py-0">
           <div class="progress-bar progress-stats" style="width: 0%"></div>
         </div>
-        <div class="text-center text-md-right">Courtesy of <a href="https://pooltool.io"  target="_blank"><img class="ptwidget" src="https://pooltool.io/pooltoollogosm.png"> PoolTool.io</a><br/><span class="ptwidget">Data updates every 60 seconds.</span></div>
+        <div class="text-center text-md-right">Courtesy of 
+          <a href="https://pooltool.io"  target="_blank">
+            <img class="ptwidget" src="https://pooltool.io/pooltoollogosm.png"> PoolTool.io
+          </a>
+          <br/>
+          <span class="ptwidget">Data updates every 60 seconds.</span>
+        </div>
       </div>
       <div class="col-2"></div>
     </div>
@@ -163,24 +201,53 @@
       <div class="col-8">
         <h4 class="text-center font-weight-bolder" id="">Staking Reward Data</h4>
         <div class="d-sm-flex flex-sm-wrap text-center justify-content-center font-weight-bolder">
-          <div class="p-2 flex-fill bg-dark"><select id="sel1" name="epoch"></select>Epoch</div>
-          <div class="p-2 flex-fill bg-dark"><span id="srblocks" class="display-xl"></span>Blocks</div>
-          <div class="p-2 flex-fill bg-dark"><span id="srstake" class="display-xl"></span>Stake</div>
-          <div class="p-2 flex-fill bg-dark" data-toggle="tooltip" title="Distributed to Delegators"><span id="srreward" class="display-xl"></span>Reward</div>
-          <div class="p-2 flex-fill bg-dark"><span id="srfee" class="display-xl">6.25%</span>Fee</div>
-          <div class="p-2 flex-fill bg-dark"><span id="srefee" class="display-xl"></span>Epoch Fee</div>
-          <div class="p-2 flex-fill bg-dark" data-toggle="tooltip" title="( Reward × 365 ) ÷ Stake"><span id="sreros" class="display-xl"></span>Epoch ROS</div>
-          <div class="p-2 flex-fill bg-dark" data-toggle="tooltip" title="Average Epoch ROS"><span id="sraros" class="display-xl"></span>Av. ROS</div>
-          <div class="p-2 flex-fill bg-dark" data-toggle="tooltip" title="TADA Return Per 10,000 Staked"><span id="sr10000" class="display-xl"></span>Per 10,000</div>
-          <div class="p-2 flex-fill bg-dark" data-toggle="tooltip" title="Lifetime TADA Return Per 10,000 Staked"><span id="srav10000" class="display-xl"></span>Lifetime Per 10,000</div>
-          <div class="p-2 flex-fill bg-dark"><span id="srltfee" class="display-xl"></span>Lifetime Fee</div>
-          <div class="p-2 flex-fill bg-dark"><span id="srltreward" class="display-xl"></span>Lifetime Reward</div>
-          <div class="p-2 flex-fill bg-dark"><span id="srltstake" class="display-xl"></span>Lifetime Stake</div>
+          <div class="p-2 flex-fill bg-dark">
+            <select id="sel1" name="epoch"></select>Epoch
+          </div>
+          <div class="p-2 flex-fill bg-dark">
+            <span id="srblocks" class="display-xl"></span>Blocks
+          </div>
+          <div class="p-2 flex-fill bg-dark">
+            <span id="srstake" class="display-xl"></span>Stake
+          </div>
+          <div class="p-2 flex-fill bg-dark" data-toggle="tooltip" title="Distributed to Delegators">
+            <span id="srreward" class="display-xl"></span>Reward
+          </div>
+          <div class="p-2 flex-fill bg-dark">
+            <span id="srfee" class="display-xl">6.25%</span>Fee
+          </div>
+          <div class="p-2 flex-fill bg-dark">
+            <span id="srefee" class="display-xl"></span>Epoch Fee
+          </div>
+          <div class="p-2 flex-fill bg-dark" data-toggle="tooltip" title="( Reward × 365 ) ÷ Stake">
+            <span id="sreros" class="display-xl"></span>Epoch ROS
+          </div>
+          <div class="p-2 flex-fill bg-dark" data-toggle="tooltip" title="Average Epoch ROS">
+            <span id="sraros" class="display-xl"></span>Av. ROS
+          </div>
+          <div class="p-2 flex-fill bg-dark" data-toggle="tooltip" title="TADA Return Per 10,000 Staked">
+            <span id="sr10000" class="display-xl"></span>Per 10,000
+          </div>
+          <div class="p-2 flex-fill bg-dark" data-toggle="tooltip" title="Lifetime TADA Return Per 10,000 Staked">
+            <span id="srav10000" class="display-xl"></span>Lifetime Per 10,000
+          </div>
+          <div class="p-2 flex-fill bg-dark">
+            <span id="srltfee" class="display-xl"></span>Lifetime Fee
+          </div>
+          <div class="p-2 flex-fill bg-dark">
+            <span id="srltreward" class="display-xl"></span>Lifetime Reward
+          </div>
+          <div class="p-2 flex-fill bg-dark"><span id="srltstake" class="display-xl"></span>Lifetime Stake
+          </div>
         </div>
         <div class="progress my-0 py-0">
           <div class="progress-bar" style="width: 100%"></div>
         </div>
-        <div class="text-center text-md-right">Data by <a href="https://pooltool.io"  target="_blank"><img class="ptwidget" src="https://pooltool.io/pooltoollogosm.png"> PoolTool.io</a></div>
+        <div class="text-center text-md-right">Data by 
+          <a href="https://pooltool.io"  target="_blank">
+            <img class="ptwidget" src="https://pooltool.io/pooltoollogosm.png"> PoolTool.io
+          </a>
+        </div>
       </div>
       <div class="col-2"></div>
     </div>
@@ -192,10 +259,26 @@
       <div class="col-8">
         <p>More 35X performance statistics and data can be found in the following websites:</p>
         <div class="d-sm-flex flex-sm-wrap text-center justify-content-center text-sm-center font-weight-bolder">
-          <div class="p-2 flex-fill bg-dark links-p"><a class="color-red" href="https://pooltool.io/pool/3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea/history" target="_blank"><img class="ptwidget" src="https://pooltool.io/pooltoollogosm.png"> PoolTool.io</a></div>
-          <div class="p-2 flex-fill bg-dark links-p"><a class="color-red" href="https://adapools.org/3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea" target="_blank"><img class="ptwidget" src="https://adapools.org/favicon.ico"> ADApools.org</a></div>
-          <div class="p-2 flex-fill bg-dark links-p"><a class="color-red" href="https://adastat.net/en/pool/3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea" target="_blank"><img class="ptwidget" src="https://adastat.net/img/icons/favicon-32x32.png"> AdaStat.net</a></div>
-          <div class="p-2 flex-fill bg-dark links-p"><a class="color-red" href="https://pegasuspool.info/pools" target="_blank"><img class="ptwidget" src="https://pegasuspool.info/images/favicon.png"> PegasusPool.info</a></div>
+          <div class="p-2 flex-fill bg-dark links-p">
+            <a class="color-red" href="https://pooltool.io/pool/3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea/history" target="_blank">
+              <img class="ptwidget" src="https://pooltool.io/pooltoollogosm.png"> PoolTool.io
+            </a>
+          </div>
+          <div class="p-2 flex-fill bg-dark links-p">
+            <a class="color-red" href="https://adapools.org/3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea" target="_blank">
+              <img class="ptwidget" src="https://adapools.org/favicon.ico"> ADApools.org
+            </a>
+          </div>
+          <div class="p-2 flex-fill bg-dark links-p">
+            <a class="color-red" href="https://adastat.net/en/pool/3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea" target="_blank">
+              <img class="ptwidget" src="https://adastat.net/img/icons/favicon-32x32.png"> AdaStat.net
+            </a>
+          </div>
+          <div class="p-2 flex-fill bg-dark links-p">
+            <a class="color-red" href="https://pegasuspool.info/pools" target="_blank">
+              <img class="ptwidget" src="https://pegasuspool.info/images/favicon.png"> PegasusPool.info
+            </a>
+          </div>
         </div>
         <div class="progress my-0 py-0">
           <div class="progress-bar" style="width: 100%"></div>
@@ -211,8 +294,11 @@
        <div class="col-2"></div>
        <div class="col-8">
          <h4>How To Delegate?</h4>
-         <p>Download the testnet wallet from <a href="https://staking.cardano.org/" target="_blank">staking.cardano.org</a> and use pool id: <span class="dont-break-out">3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea</span> and ticker symbol: 35X from delegation center of testnet wallet to delegate your ADA and earn reward.</p>
-         <p>To know more about Shelley Incentivized Testnet and to download testnet wallet visit <a href="https://staking.cardano.org/" target="_blank">staking.cardano.org</a> and <a href="https://testnet.iohkdev.io/en/cardano/shelley/" target="_blank">tesnet.iohkdev.io</a></p>
+         <p>
+          Download the testnet wallet from <a href="https://staking.cardano.org/" target="_blank">staking.cardano.org</a> and use pool id: <span class="dont-break-out">3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea</span> and ticker symbol: 35X from delegation center of testnet wallet to delegate your ADA and earn reward.
+         </p>
+         <p>To know more about Shelley Incentivized Testnet and to download testnet wallet visit <a href="https://staking.cardano.org/" target="_blank">staking.cardano.org</a> and <a href="https://testnet.iohkdev.io/en/cardano/shelley/" target="_blank">tesnet.iohkdev.io</a>
+         </p>
          <div id="wallet" class="carousel slide d-none d-md-block" data-ride="carousel">
           <!-- Indicators -->
           <ul class="carousel-indicators">
