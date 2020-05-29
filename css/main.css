@@ -101,6 +101,17 @@ a.ptwidget {
 .carousel-caption {
 	color: #ff4040!important;
 }
+
+@media screen and (max-width: 600px) {
+  .mlink-hide {
+    display: none;
+  }
+
+  .navbar-nav li {
+    margin-bottom: 1rem;
+  }
+}
+
 /*
 .pace {
   -webkit-pointer-events: none;
