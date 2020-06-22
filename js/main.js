@@ -45,7 +45,7 @@ let LoadData = function() {
 };
 
 let StakeData = function() {
-    $.getJSON( "https://pooltool.s3-us-west-2.amazonaws.com/8e4d2a3/pools/"+mypoolid+"/epochstats.json", function( data ) {
+    $.getJSON( "epochstats.json", function( data ) {
         $.each(data, function(index, jsonObject){
             if (index == "updatedAt") {
                 return false;
