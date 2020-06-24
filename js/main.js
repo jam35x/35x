@@ -136,7 +136,7 @@ let epoch_counter = function() {
     const start = Date.UTC(2019, 11, 13, 19, 13, 37);
     
     var now = Date.now();
-    var current_epoch = parseInt((now - start) / epoch_m_sec); 
+    var current_epoch = Math.floor((now - start) / epoch_m_sec); 
     var remainder = (now - start) % epoch_m_sec;
     var distance = epoch_m_sec - remainder;
 
