@@ -1,4 +1,4 @@
-var mypoolid = "3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea";
+var mypoolid = "3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea"
 let LoadData = function() {
     const start = Date.now();
     var currentepoch = 0;
@@ -11,7 +11,7 @@ let LoadData = function() {
     });
 
     $.getJSON( "https://pooltool.s3-us-west-2.amazonaws.com/8e4d2a3/pools/"+mypoolid+"/livestats.json?now="+String(start), function( data ) {
-        var formattedstake = numeral(data["livestake"] / 1000000).format('0.00a');
+        var formattedstake = numeral(data["livestake"]/1000000).format('0.00a');
 
             $("#ptstake").html(formattedstake);
             if (
@@ -27,12 +27,12 @@ let LoadData = function() {
             $("#pteblocks").html(data["epochblocks"]);
             $("#ptlblocks").html(data["lifetimeblocks"]);
     });
-    
+
     let progress_bar = function () {
         var width = 0;
         function frame() {
             if (width < 100) {
-                width += 2;
+                width+=2;
                 width_i = "width: " + width + "%";
                 $(".progress-stats").attr("style", width_i); 
             } else {
@@ -45,7 +45,7 @@ let LoadData = function() {
 };
 
 let StakeData = function() {
-    $.getJSON( "epochstats.json", function( data ) {
+    $.getJSON( "https://pooltool.s3-us-west-2.amazonaws.com/8e4d2a3/pools/"+mypoolid+"/epochstats.json", function( data ) {
         $.each(data, function(index, jsonObject){
             if (index == "updatedAt") {
                 return false;
@@ -70,21 +70,22 @@ let StakeData = function() {
                 x = x + Number(data[key]["blockstake"]);
                 y = y + Number(data[key]["value_for_stakers"]);
                 z = z + Number(data[key]["value_taxed"]);
-                xx = xx + (((Number(data[key]["value_for_stakers"])) * 10000) / Number(data[key]["blockstake"]));
-                //console.log(z);
+                xx = xx + (((Number(data[key]["value_for_stakers"]))*10000)/Number(data[key]["blockstake"]));
+                //console.log(xx);
             };
 
-            var blockStake = numeral(data[epoch]["blockstake"] / 1000000).format('0.00a'); 
-            var blockReward = numeral(data[epoch]["value_for_stakers"] / 1000000).format('0.00a');
-            var epochFee = numeral(data[epoch]["value_taxed"] / 1000000).format('0.00a');
-            var epochRos = numeral((data[epoch]["value_for_stakers"] * 365) / data[epoch]["blockstake"]).format('0.00%');
-            var avgRos = numeral((y * 365) / x).format('0.00%');
-            var per1000s = numeral((data[epoch]["value_for_stakers"] * 10000) / data[epoch]["blockstake"]).format('0.00a');
+
+            var blockStake = numeral(data[epoch]["blockstake"]/1000000).format('0.00a'); 
+            var blockReward = numeral(data[epoch]["value_for_stakers"]/1000000).format('0.00a');
+            var epochFee = numeral(data[epoch]["value_taxed"]/1000000).format('0.00a');
+            var epochRos = numeral((data[epoch]["value_for_stakers"]*365)/data[epoch]["blockstake"]).format('0.00%');
+            var avgRos = numeral((y*365)/x).format('0.00%');
+            var ltimeStake = numeral(x/1000000).format('0.00a');
+            var ltimeReward = numeral(y/1000000).format('0.00a');
+            var ltimeFee = numeral(z/1000000).format('0.00a');
+            var per1000s = numeral((data[epoch]["value_for_stakers"]*10000)/data[epoch]["blockstake"]).format('0.00a');
             var lavg1000s = numeral(xx).format('0.00a');
-            var ltimeFee = numeral(z / 1000000).format('0.00a');
-            var ltimeReward = numeral(y / 1000000).format('0.00a');
-            var ltimeStake = numeral(x / 1000000).format('0.00a');
-            //console.log(avgRos);
+            //console.log(selectedEpoch);
 
             $("#srstake").html(blockStake);
             $("#srblocks").html(data[epoch]["blocks"]);
@@ -92,11 +93,11 @@ let StakeData = function() {
             $("#srefee").html(epochFee);
             $("#sreros").html(epochRos);
             $("#sraros").html(avgRos);
+            $("#srltstake").html(ltimeStake);
+            $("#srltreward").html(ltimeReward);
+            $("#srltfee").html(ltimeFee);
             $("#sr10000").html(per1000s);
             $("#srav10000").html(lavg1000s);
-            $("#srltfee").html(ltimeFee);
-            $("#srltreward").html(ltimeReward);
-            $("#srltstake").html(ltimeStake);
 
 
         };
@@ -131,16 +132,18 @@ let scroll_point = function () {
     }).scroll();
 };
 
+ 
+
 let epoch_counter = function() {
-    const epoch_m_sec = 86400 * 1000;
-    const start = Date.UTC(2019, 11, 13, 19, 13, 37);
+    //const epoch_m_sec = 86400 * 1000;
+    const start = Date.UTC(2020, 6, 29);
     
     var now = Date.now();
-    var current_epoch = Math.floor((now - start) / epoch_m_sec); 
-    var remainder = (now - start) % epoch_m_sec;
-    var distance = epoch_m_sec - remainder;
+    //var current_epoch = Math.floor((now - start) / epoch_m_sec) 
+    //var remainder = (now - start) % epoch_m_sec;
+    var distance = start - now;//epoch_m_sec - remainder;
 
-    $("#current-epoch").html(current_epoch); 
+   //$("#current-epoch").html(current_epoch) 
 
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -159,7 +162,7 @@ let epoch_counter = function() {
     if (days == 0 && hours == 0 && minutes == 0) {
         $("#counter").removeAttr("style");
         $("#counter").attr("style", "font-size:165%;");
-        $("#counter").html(seconds + "<span>s</span>");
+        $("#counter").html(two_digit(seconds) + "<span>s</span>");
         $("#counter span").attr("style", "font-size:55%;");
     } else if (days == 0 && hours == 0) {
         $("#counter").removeAttr("style");
@@ -174,14 +177,14 @@ let epoch_counter = function() {
     } else {
         $("#counter").removeAttr("style");
         $("#counter").attr("style", "font-size:150%;");
-        $("#counter").html(two_digit(days) + "<span>day</span> " + two_digit(hours) + "<span>hr</span> " + two_digit(minutes) + "<span>min</span> " + two_digit(seconds) + "<span>sec</span>");
+        $("#counter").html(two_digit(days) + "<span>days</span> " + two_digit(hours) + "<span>hr</span> " + two_digit(minutes) + "<span>min</span> " + two_digit(seconds) + "<span>sec</span>");
         $("#counter span").attr("style", "font-size:50%;");
     };
 
-    var progress = Math.ceil((remainder * 100) / epoch_m_sec);
+    //var progress = Math.ceil((remainder * 100) / epoch_m_sec);
 
-    $(".progress-epoch").removeAttr("style");
-    $(".progress-epoch").attr("style", "width: " + progress + "%");
+    //$(".progress-epoch").removeAttr("style");
+    //$(".progress-epoch").attr("style", "width: " + progress + "%");
 };
 
 $(document).ready(function() {
