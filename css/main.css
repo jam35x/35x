@@ -1,6 +1,7 @@
 body { 
   	background-color: black;
 	font-family: 'Rajdhani', sans-serif;
+	height: 100%;
 }
 
 p, .links-p {
