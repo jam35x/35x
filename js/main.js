@@ -93,10 +93,7 @@ let epoch_counter = function() {
         };
     };
     
-    $("#counter").removeAttr("style");
-    $("#counter").attr("style", "font-size:200%;");
     $("#counter").html(two_digit(days) + "<span>days</span> " + two_digit(hours) + "<span>hr</span> " + two_digit(minutes) + "<span>min</span> " + two_digit(seconds) + "<span>sec</span>");
-    $("#counter span").attr("style", "font-size:50%;");
 
     //var progress = Math.ceil((remainder * 100) / epoch_m_sec);
 
