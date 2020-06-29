@@ -108,6 +108,14 @@ a.ptwidget {
 	color: #ff4040!important;
 }
 
+#counter {
+  font-size: 200%;
+}
+
+#counter span {
+  font-size: 50%;
+}
+
 @media screen and (max-width: 992px) {
   .mlink-hide {
     display: none;
@@ -115,6 +123,14 @@ a.ptwidget {
 
   .navbar-nav li {
     margin-bottom: 1rem;
+  }
+
+  #counter {
+    font-size: 150%;
+  }
+
+  #counter span {
+    font-size: 50%;
   }
 }
 
