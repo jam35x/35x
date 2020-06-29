@@ -109,7 +109,8 @@ a.ptwidget {
 }
 
 #counter {
-  font-size: 200%;
+  font-size: 175%;
+  font-weight: normal;
 }
 
 #counter span {
@@ -127,6 +128,7 @@ a.ptwidget {
 
   #counter {
     font-size: 150%;
+    font-weight: normal;
   }
 
   #counter span {
