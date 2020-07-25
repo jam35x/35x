@@ -70,7 +70,7 @@ let StakeData = function() {
 
 let epoch_counter = function() {
     //const epoch_m_sec = 86400 * 1000;
-    const start = Date.UTC(2020, 6, 29);
+    const start = Date.UTC(2020, 6, 29, 21, 44, 51);
     
     var now = Date.now();
     //var current_epoch = Math.floor((now - start) / epoch_m_sec) 
