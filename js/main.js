@@ -79,7 +79,7 @@ let epoch_counter = function() {
     var remainder = (now - start) % epoch_m_sec;
     var distance = epoch_m_sec - remainder;
 
-   $("#current-epoch").html(current_epoch + 1);
+   $("#current-epoch").html(current_epoch);
    $("#e_date").html(next_e_date);
 
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
