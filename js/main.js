@@ -69,15 +69,18 @@ let StakeData = function() {
 };
 
 let epoch_counter = function() {
-    //const epoch_m_sec = 86400 * 1000;
+    const epoch_m_sec = 432000 * 1000;
     const start = Date.UTC(2020, 6, 29, 21, 44, 51);
     
     var now = Date.now();
-    //var current_epoch = Math.floor((now - start) / epoch_m_sec) 
-    //var remainder = (now - start) % epoch_m_sec;
-    var distance = start - now;//epoch_m_sec - remainder;
+    var shelly_epoch = Math.floor((now - start) / epoch_m_sec);
+    var current_epoch = shelly_epoch + 208;
+    var next_e_date = new Date(start + ((shelly_epoch + 1) * epoch_m_sec));
+    var remainder = (now - start) % epoch_m_sec;
+    var distance = epoch_m_sec - remainder;
 
-   //$("#current-epoch").html(current_epoch) 
+   $("#current-epoch").html(current_epoch + 1);
+   $("#e_date").html(next_e_date);
 
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -92,13 +95,13 @@ let epoch_counter = function() {
             return num;
         };
     };
-    
+
+
     $("#counter").html(two_digit(days) + "<span>days</span> " + two_digit(hours) + "<span>hr</span> " + two_digit(minutes) + "<span>min</span> " + two_digit(seconds) + "<span>sec</span>");
+    var progress = Math.ceil((remainder * 100) / epoch_m_sec);
 
-    //var progress = Math.ceil((remainder * 100) / epoch_m_sec);
-
-    //$(".progress-epoch").removeAttr("style");
-    //$(".progress-epoch").attr("style", "width: " + progress + "%");
+    $(".progress-epoch").removeAttr("style");
+    $(".progress-epoch").attr("style", "width: " + progress + "%");
 };
 
 $(document).ready(function() {
