@@ -41,7 +41,7 @@ a.ptwidget {
 }
 
 .display-xl {
-	font-size: x-large;
+	font-size: xx-large;
 	color: coral;
 	font-weight: bolder;
 	display: block;
@@ -68,7 +68,7 @@ a.ptwidget {
 }
 
 .display-xl-c {
-	font-size: xx-large;
+	font-size: x-large;
 	color: coral;
 	font-weight: bolder;
 	display: inline-block;
