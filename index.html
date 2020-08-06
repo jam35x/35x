@@ -44,20 +44,9 @@
               News
             </a>
           </li>
-          <!--
           <li class="nav-item mlink-hide">
             <a class="nav-link scroll_active active" href="#top">
               <i class="fas fa-arrow-alt-circle-up"></i>
-            </a>
-          </li>
-          <li class="nav-item mlink-hide">
-            <a class="nav-link scroll_active" href="#live_stats">
-              Live Stats
-            </a>
-          </li>
-          <li class="nav-item mlink-hide">
-            <a class="nav-link scroll_active" href="#reward_data">
-              Reward Data
             </a>
           </li>
           <li class="nav-item mlink-hide">
@@ -68,6 +57,11 @@
           <li class="nav-item mlink-hide">
             <a class="nav-link scroll_active" href="#how_delegate">
               How to Delegate?
+            </a>
+          </li>
+          <li class="nav-item mlink-hide">
+            <a class="nav-link scroll_active" href="#reward_data">
+              Reward Data
             </a>
           </li>
           <li class="nav-item mlink-hide">
@@ -119,7 +113,7 @@
     <div class="row">
       <div class="col-1"></div>
       <div class="col-10">
-        <h2>Cardano Staking Pool</h2>
+        <h2><img src="cardano.png" style="height: 30px; width: 30px;"> Cardano Staking Pool</h2>
         <div class="progress my-0 py-0">
           <div class="progress-bar progress-epoch" style="width: 100%"></div>
         </div>
@@ -144,88 +138,117 @@
           </div>
         </div>
         <h5 class="text-center"><b>Date:</b> <span id="e_date"></span></h5>
-        <!--
-        <h4 class="mt-4">
-          <i class="far fa-hourglass"></i>
-          <span style="margin-left: 12px">Epoch 
-            <span id="current-epoch"></span> Ends in: 
-            <span id="counter" class="display-xl-c"></span>
+         <h5 class="dont-break-out border-top border-success pt-4">
+          <i class="far fa-id-card"></i>
+          <span style="margin-left: 10px">Stake Pool ID: 
+            <a href="https://pooltool.io/pool/bd6bc05d7ca20d7adac9746cd6cb68acf88aa5d3c5fbf91e4fadbcc9/" target="_blank">bd6bc05d7ca20d7adac9746cd6cb68acf88aa5d3c5fbf91e4fadbcc9</a>
           </span>
-        </h4>
+        </h5>
         <h5>
           <i class="far fa-star"></i>
           <span style="margin-left: 10px">Ticker: 
             <span class="display-xl-c">35X</span>
           </span>
         </h5>        
-        <h5 class="dont-break-out">
-          <i class="far fa-id-card"></i>
-          <span style="margin-left: 10px">Stake Pool ID: 
-            <a href="https://shelleyexplorer.cardano.org/en/stake-pool/3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea/" target="_blank">3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea</a>
+        <h5>
+          <i class="far fa-money-bill-alt"></i>
+          <span style="margin-left: 10px">Fee: 
+            <span class="display-xl-c">700 ADA</span>
           </span>
         </h5>
+        <h5>
+          <i class="fas fa-wallet"></i>
+          <span style="margin-left: 12px">Pledge: 
+            <span class="display-xl-c">70K ADA</span>
+          </span>
+        </h5>          
         <h5 class="my-3">
           <i class="fas fa-download"></i>
-          <span style="margin-left: 10px">To download Testnet wallet & to know more about Shelley ITN visit 
-            <a href="https://staking.cardano.org/" target="_blank">staking.cardano.org</a>.
+          <span style="margin-left: 10px">To download cardano offical wallet and to know more about Cardano visit 
+            <a href="https://cardano.org/" target="_blank">cardano.org</a>.
           </span>
         </h5>
-      -->
       </div>
       <div class="col-2"></div>
     </div>
   </div>
   <!-- Header -->
-  <!--
-  <span class="anchor" id="live_stats"></span>
-  <div class="container-fluid" id="livestat">
-    <div class="row my-4">
+  <span class="anchor" id="per_links"></span>
+  <div class="container-fluid">
+    <div class="row my-5">
       <div class="col-2"></div>
-      <div class="col-8 border-bottom border-success">
-        <h4 class="text-center font-weight-bolder">Live Pool Stats</h4>    
-        <div class="d-sm-flex flex-sm-wrap">
-          <div class="p-2 flex-fill">
-            <h4 class="text-center justify-content-center font-weight-bolder">
-              <i class="fas fa-hourglass-half"></i>
-              <span style="margin-left: 5px">
-                Shelly on Mainnet in:
-                <span id="counter" class="display-xl"></span>
-              </span>
-            </h4>
+      <div class="col-8">
+        <p>More 35X pool data can be found here:</p>
+        <div class="d-sm-flex flex-sm-wrap text-center justify-content-center text-sm-center font-weight-bolder">
+          <div class="p-2 flex-fill bg-dark links-p">
+            <a class="color-red" href="https://pooltool.io/pool/bd6bc05d7ca20d7adac9746cd6cb68acf88aa5d3c5fbf91e4fadbcc9/" target="_blank">
+              <img class="ptwidget" src="https://pooltool.io/pooltoollogosm.png"> PoolTool.io
+            </a>
           </div>
-          <div class="p-2 flex-fill bg-dark">
-            <span id="ptslot" class="display-xl"></span>Slot
+          <div class="p-2 flex-fill bg-dark links-p">
+            <a class="color-red" href="https://adapools.org/pool/bd6bc05d7ca20d7adac9746cd6cb68acf88aa5d3c5fbf91e4fadbcc9" target="_blank">
+              <img class="ptwidget" src="https://adapools.org/favicon.ico"> ADApools.org
+            </a>
           </div>
-          <div class="p-2 flex-fill bg-dark">
-            <span id="ptheight" class="display-xl"></span>Height
-          </div>
-          <div class="p-2 flex-fill bg-dark">
-            <span id="ptstake" class="display-xl"></span>Live Stake
-          </div>
-          <div class="p-2 flex-fill bg-dark">
-            <span id="pteblocks" class="display-xl"></span>Epoch Blocks
-          </div>
-          <div class="p-2 flex-fill bg-dark">
-            <span id="ptlblocks" class="display-xl"></span>Lifetime Blocks
+          <div class="p-2 flex-fill bg-dark links-p">
+            <a class="color-red" href="https://pegasuspool.info/pools" target="_blank">
+              <img class="ptwidget" src="https://pegasuspool.info/images/favicon.png"> PegasusPool.info
+            </a>
           </div>
         </div>
-        <h4 class="text-center">Date: July 29, 2020</h4>
         <div class="progress my-0 py-0">
-          <div class="progress-bar progress-stats" style="width: 0%"></div>
-        </div>
-        <div class="text-center text-md-right">Courtesy of 
-          <a href="https://pooltool.io"  target="_blank">
-            <img class="ptwidget" src="https://pooltool.io/favicon.ico"> PoolTool.io
-          </a>
-          <br/>
-          <span class="ptwidget">Data updates every 60 seconds.</span>
+          <div class="progress-bar" style="width: 100%"></div>
         </div>
       </div>
       <div class="col-2"></div>
     </div>
   </div>
+  
+  <span class="anchor" id="how_delegate"></span>
+  <div class="container-fluid">
+     <div class="row my-5">
+       <div class="col-2"></div>
+       <div class="col-8">
+         <h4>How To Delegate?</h4>
+         <p>
+          Download the Daedalus wallet from <a href="https://daedaluswallet.io/" target="_blank">daedaluswallet.io</a> and use pool id: <span class="dont-break-out">bd6bc05d7ca20d7adac9746cd6cb68acf88aa5d3c5fbf91e4fadbcc9</span> and ticker symbol: 35X from delegation center of the wallet to delegate your ADA and earn reward.
+         </p>
+         <div id="wallet" class="carousel slide d-none d-lg-block" data-ride="carousel">
+          <!-- Indicators -->
+          <ul class="carousel-indicators">
+            <li data-target="#wallet" data-slide-to="0" class="active"></li>
+            <li data-target="#wallet" data-slide-to="1"></li>
+          </ul>
+          <!-- The slideshow -->
+          <div class="carousel-inner">
+            <div class="carousel-item text-center active">
+              <img src="daedalus.png" alt="Daedalus Screenshot" width="900" height="400">
+                <div class="carousel-caption">
+                  <h3>Daedalus</h3>
+                </div>
+            </div>
+            <!--
+            <div class="carousel-item text-center">
+              <img src="yoroi.png" alt="Yoroi Screenshot" width="900" height="400">
+                <div class="carousel-caption">
+                  <h3>Yoroi</h3>
+                </div>              
+            </div> -->
+          <!-- Left and right controls -->
+          <a class="carousel-control-prev" href="#wallet" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#wallet" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+       </div>
+       <div class="col-2"></div>
+     </div>
+    </div>
+  </div>
+  
   <span class="anchor" id="reward_data"></span>
--->
   <div class="container-fluid">
     <div class="row my-5">
       <div class="col-2"></div>
@@ -283,88 +306,7 @@
       <div class="col-2"></div>
     </div>
   </div>
-  <span class="anchor" id="per_links"></span>
-  <div class="container-fluid">
-    <div class="row my-5">
-      <div class="col-2"></div>
-      <div class="col-8">
-        <p>More 35X ITN performance statistics and data can be found in the following websites:</p>
-        <div class="d-sm-flex flex-sm-wrap text-center justify-content-center text-sm-center font-weight-bolder">
-          <div class="p-2 flex-fill bg-dark links-p">
-            <a class="color-red" href="https://pooltool.io/pool/3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea/history" target="_blank">
-              <img class="ptwidget" src="https://pooltool.io/favicon.ico"> PoolTool.io
-            </a>
-          </div>
-          <div class="p-2 flex-fill bg-dark links-p">
-            <a class="color-red" href="https://adapools.org/3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea" target="_blank">
-              <img class="ptwidget" src="https://adapools.org/images/ADA_pools_new-05.svg"> ADApools.org
-            </a>
-          </div>
-          <div class="p-2 flex-fill bg-dark links-p">
-            <a class="color-red" href="https://adastat.net/en/pool/3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea" target="_blank">
-              <img class="ptwidget" src="https://adastat.net/img/icons/favicon-32x32.png"> AdaStat.net
-            </a>
-          </div>
-          <div class="p-2 flex-fill bg-dark links-p">
-            <a class="color-red" href="https://pegasuspool.info/pools" target="_blank">
-              <img class="ptwidget" src="https://pegasuspool.info/images/favicon.png"> PegasusPool.info
-            </a>
-          </div>
-        </div>
-        <div class="progress my-0 py-0">
-          <div class="progress-bar" style="width: 100%"></div>
-        </div>
-      </div>
-      <div class="col-2"></div>
-    </div>
-  </div>
   
-  <!--
-  <span class="anchor" id="how_delegate"></span>
-  <div class="container-fluid">
-     <div class="row my-5">
-       <div class="col-2"></div>
-       <div class="col-8">
-         <h4>How To Delegate?</h4>
-         <p>
-          Download the testnet wallet from <a href="https://staking.cardano.org/" target="_blank">staking.cardano.org</a> and use pool id: <span class="dont-break-out">3c6b71eb0ee0152b8b2ded843539c3f39c9fcaa74df987e968cf2388f2392bea</span> and ticker symbol: 35X from delegation center of testnet wallet to delegate your ADA and earn reward.
-         </p>
-         <p>To know more about Shelley Incentivized Testnet and to download testnet wallet visit <a href="https://staking.cardano.org/" target="_blank">staking.cardano.org</a> and <a href="https://testnet.iohkdev.io/en/cardano/shelley/" target="_blank">tesnet.iohkdev.io</a>
-         </p>
-         <div id="wallet" class="carousel slide d-none d-lg-block" data-ride="carousel">
-          -- Indicators --
-          <ul class="carousel-indicators">
-            <li data-target="#wallet" data-slide-to="0" class="active"></li>
-            <li data-target="#wallet" data-slide-to="1"></li>
-          </ul>
-          -- The slideshow --
-          <div class="carousel-inner">
-            <div class="carousel-item text-center active">
-              <img src="daedalus.png" alt="Daedalus Screenshot" width="900" height="400">
-                <div class="carousel-caption">
-                  <h3>Daedalus</h3>
-                </div>
-            </div>
-            <div class="carousel-item text-center">
-              <img src="yoroi.png" alt="Yoroi Screenshot" width="900" height="400">
-                <div class="carousel-caption">
-                  <h3>Yoroi</h3>
-                </div>              
-            </div>
-          -- Left and right controls --
-          <a class="carousel-control-prev" href="#wallet" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-          </a>
-          <a class="carousel-control-next" href="#wallet" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
-          </a>
-        </div>
-       </div>
-       <div class="col-2"></div>
-     </div>
-    </div>
-  </div>
--->
   <!-- Footer -->
   <span class="anchor" id="bottom"></span>
   <footer class="page-footer font-small mdb-color pt-4">
