@@ -104,6 +104,24 @@ let epoch_counter = function() {
     $(".progress-epoch").attr("style", "width: " + progress + "%");
 };
 
+let scroll_point = function () {
+    $(window).scroll(function() {
+        var wind_scroll = $(window).scrollTop();
+        if( $(window).height() + wind_scroll >= $(document).height() ) {
+            $('.scroll_active').removeClass('active');
+            $('[href="#bottom"]').addClass('active');
+        } else {
+            $('.anchor').each(function(i) {
+                if ($(this).position().top <= wind_scroll + 100) {
+                    $('.scroll_active').removeClass('active');
+                    $('.scroll_active').eq(i).addClass('active');
+                }
+            });
+        }
+
+    }).scroll();
+};
+
 $(document).ready(function() {
     StakeData();
     $(document).on('click','.navbar-collapse',function(e) {
@@ -113,4 +131,5 @@ $(document).ready(function() {
     });
     epoch_counter();
     setInterval(epoch_counter, 1000);
+    scroll_point();
 });
